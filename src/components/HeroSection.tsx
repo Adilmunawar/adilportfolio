@@ -9,38 +9,34 @@ const HeroSection = () => {
     Icon: Instagram,
     href: 'https://instagram.com/adilmunawarx',
     label: 'Instagram',
-    color: 'group-hover:text-pink-400',
-    bgGradient: 'from-pink-500/10 to-purple-500/10',
-    hoverGradient: 'hover:from-pink-500/20 hover:to-purple-500/20',
-    borderColor: 'border-pink-400/20 hover:border-pink-400/50',
-    shadowColor: 'hover:shadow-pink-500/30'
+    color: 'text-pink-400',
+    shadow: 'shadow-pink-500/50',
+    buttonBg: 'bg-pink-500',
+    glowColor: 'from-pink-500'
   }, {
     Icon: Github,
     href: 'https://github.com/adilmunawar',
     label: 'GitHub',
-    color: 'group-hover:text-gray-300',
-    bgGradient: 'from-gray-500/10 to-slate-500/10',
-    hoverGradient: 'hover:from-gray-500/20 hover:to-slate-500/20',
-    borderColor: 'border-gray-400/20 hover:border-gray-400/50',
-    shadowColor: 'hover:shadow-gray-500/30'
+    color: 'text-gray-300',
+    shadow: 'shadow-gray-500/50',
+    buttonBg: 'bg-gray-500',
+    glowColor: 'from-gray-500'
   }, {
     Icon: Linkedin,
     href: 'https://linkedin.com/in/adilmunawar',
     label: 'LinkedIn',
-    color: 'group-hover:text-blue-400',
-    bgGradient: 'from-blue-500/10 to-indigo-500/10',
-    hoverGradient: 'hover:from-blue-500/20 hover:to-indigo-500/20',
-    borderColor: 'border-blue-400/20 hover:border-blue-400/50',
-    shadowColor: 'hover:shadow-blue-500/30'
+    color: 'text-blue-400',
+    shadow: 'shadow-blue-500/50',
+    buttonBg: 'bg-blue-500',
+    glowColor: 'from-blue-500'
   }, {
     Icon: Phone,
     href: 'tel:+923244965220',
     label: 'Phone',
-    color: 'group-hover:text-green-400',
-    bgGradient: 'from-green-500/10 to-emerald-500/10',
-    hoverGradient: 'hover:from-green-500/20 hover:to-emerald-500/20',
-    borderColor: 'border-green-400/20 hover:border-green-400/50',
-    shadowColor: 'hover:shadow-green-500/30'
+    color: 'text-green-400',
+    shadow: 'shadow-green-500/50',
+    buttonBg: 'bg-green-500',
+    glowColor: 'from-green-500'
   }];
 
   return (
@@ -50,8 +46,8 @@ const HeroSection = () => {
       
       {/* Reduced background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl professional-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl professional-pulse" style={{
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full professional-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full professional-pulse" style={{
           animationDelay: '2s'
         }}></div>
       </div>
@@ -103,8 +99,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Redesigned social links with tooltips */}
-        <div className="flex justify-center space-x-4 mb-12 animate-scale-in" style={{
+        {/* Redesigned social links with advanced animations */}
+        <div className="flex justify-center space-x-6 mb-12 animate-scale-in" style={{
           animationDelay: '0.6s'
         }}>
           {socialLinks.map((social, index) => (
@@ -114,15 +110,23 @@ const HeroSection = () => {
                   href={social.href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className={`group relative w-14 h-14 bg-gradient-to-br ${social.bgGradient} ${social.hoverGradient} rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm border-2 ${social.borderColor} hover:shadow-2xl ${social.shadowColor} ${social.color}`}
+                  className="group relative"
                   aria-label={social.label}
-                  style={{
-                    animationDelay: `${index * 0.1}s`
-                  }}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <social.Icon size={24} className="transition-all duration-300 group-hover:scale-110" />
-                  <div className="absolute inset-0 rounded-full border border-white/10 opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute inset-0 rounded-full bg-black opacity-20 group-hover:opacity-10 transition-opacity duration-300"></div>
+                  <div className={`absolute -inset-1 bg-gradient-to-r ${social.glowColor} to-cyber-blue rounded-full blur-md opacity-50 group-hover:opacity-100 transition duration-500 animate-pulse group-hover:animate-none`}></div>
+                  <div className="relative w-16 h-16 bg-cyber-dark rounded-full transition-transform duration-300 group-hover:scale-95">
+                    <div className={`absolute inset-0.5 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full`}></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div 
+                        className={`w-full h-full rounded-full transition-all duration-300 group-hover:translate-y-0.5
+                                    bg-gray-900 border-2 border-gray-700/50 
+                                    flex items-center justify-center`}
+                      >
+                         <social.Icon size={28} className={`${social.color} transition-all duration-300 group-hover:scale-110`} />
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>

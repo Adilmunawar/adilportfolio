@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Screenshot of an e-commerce platform homepage.",
+      "imageUrl": "https://images.unsplash.com/photo-1726056652635-7db7a936e7be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZS1jb21tZXJjZSUyMHdlYnNpdGV8ZW58MHx8fHwxNzU5MDIwNzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "e-commerce website"
+    },
+    {
+      "id": "project-2",
+      "description": "Task management application dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1732194516739-9325055c35de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXNoYm9hcmQlMjBhcHB8ZW58MHx8fHwxNzU4OTcwMDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard app"
+    },
+    {
+      "id": "project-3",
+      "description": "Developer portfolio website.",
+      "imageUrl": "https://images.unsplash.com/photo-1641444473031-75aa19c003a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9ydGZvbGlvJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NTkwNTI2NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portfolio website"
+    },
+    {
+      "id": "blog-1",
+      "description": "Abstract code background for a blog post about React Server Components.",
+      "imageUrl": "https://images.unsplash.com/photo-1653387137517-fbc54d488ed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZWFjdCUyMGNvZGV8ZW58MHx8fHwxNzU5MDQyODI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "react code"
+    },
+    {
+      "id": "blog-2",
+      "description": "TypeScript logo on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1659123739225-ebc34dbdab0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0eXBlc2NyaXB0JTIwbG9nb3xlbnwwfHx8fDE3NTkwMzY5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "typescript logo"
+    },
+    {
+      "id": "blog-3",
+      "description": "Illustration of a CI/CD pipeline.",
+      "imageUrl": "https://images.unsplash.com/photo-1735934368486-70ce8b57d709?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGV2b3BzJTIwcGlwZWxpbmV8ZW58MHx8fHwxNzU5MDYyMzQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "devops pipeline"
+    },
+    {
+      "id": "hero-image",
+      "description": "Adil Munawar's profile picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1689218742459-3f4dfb7b5996?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkwMzU1ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "developer portrait"
+    }
+  ]
 }

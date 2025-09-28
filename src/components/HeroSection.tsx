@@ -68,19 +68,16 @@ const HeroSection = () => {
 
     skillRefs.current.forEach((ref, index) => {
       if (ref) {
-        ref.addEventListener('mousemove', (e) => handleMouseMove(e, index));
-        ref.addEventListener('mouseleave', () => handleMouseLeave(index));
+        const mouseMove = (e: MouseEvent) => handleMouseMove(e, index);
+        const mouseLeave = () => handleMouseLeave(index);
+        ref.addEventListener('mousemove', mouseMove);
+        ref.addEventListener('mouseleave', mouseLeave);
+        return () => {
+            ref.removeEventListener('mousemove', mouseMove);
+            ref.removeEventListener('mouseleave', mouseLeave);
+        }
       }
     });
-
-    return () => {
-      skillRefs.current.forEach((ref, index) => {
-        if (ref) {
-          ref.removeEventListener('mousemove', (e) => handleMouseMove(e, index));
-          ref.removeEventListener('mouseleave', () => handleMouseLeave(index));
-        }
-      });
-    };
   }, []);
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -193,7 +190,7 @@ const HeroSection = () => {
                   className="group relative"
                   aria-label={social.label}
                 >
-                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-75 transition-all duration-300 blur-md animate-pulse group-hover:animate-none"></div>
+                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-75 transition-all duration-300 blur-md animate-pulse-slow group-hover:animate-none"></div>
                   <div className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-gray-600/80">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
                     <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />

@@ -144,7 +144,7 @@ const HeroSection = () => {
           {/* Status indicator */}
           <div className="flex items-center justify-center mb-4">
             <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/20 rounded-full border border-emerald-500/30 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full professional-pulse"></div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse-slow"></div>
               <span className="text-emerald-400 text-sm font-medium">Available for work</span>
             </div>
           </div>
@@ -204,20 +204,14 @@ const HeroSection = () => {
                     style={{ '--gradient-color': social.gradientColor } as React.CSSProperties}
                   ></div>
                   <div 
-                    className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-transparent"
+                    className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-transparent animate-social-icon-pulse"
                     style={{
                       '--glow-color-start': social.glowColorStart,
                       '--glow-color-end': social.glowColorEnd,
                     } as React.CSSProperties}
                   >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
-                    <div 
-                      className="orbiting-light"
-                      style={{
-                        '--glow-color': social.gradientColor,
-                        animationDelay: `${index * 2}s`
-                      } as React.CSSProperties}
-                    ></div>
+                    
                     <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />
                   </div>
                 </Link>

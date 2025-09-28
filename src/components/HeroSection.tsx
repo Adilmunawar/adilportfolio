@@ -78,8 +78,10 @@ const HeroSection = () => {
         ref.addEventListener('mousemove', mouseMove);
         ref.addEventListener('mouseleave', mouseLeave);
         return () => {
-            ref.removeEventListener('mousemove', mouseMove);
-            ref.removeEventListener('mouseleave', mouseLeave);
+            if(ref) {
+              ref.removeEventListener('mousemove', mouseMove);
+              ref.removeEventListener('mouseleave', mouseLeave);
+            }
         }
       }
     });
@@ -112,8 +114,10 @@ const HeroSection = () => {
     button.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      button.removeEventListener('mousemove', handleMouseMove);
-      button.removeEventListener('mouseleave', handleMouseLeave);
+      if(button) {
+        button.removeEventListener('mousemove', handleMouseMove);
+        button.removeEventListener('mouseleave', handleMouseLeave);
+      }
     };
   }, []);
 
@@ -124,8 +128,8 @@ const HeroSection = () => {
       
       {/* Reduced background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full professional-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full professional-pulse" style={{
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full animate-pulse-slow" style={{
           animationDelay: '2s'
         }}></div>
       </div>
@@ -169,7 +173,7 @@ const HeroSection = () => {
               <div
                 key={skill}
                 ref={(el) => (skillRefs.current[index] = el)}
-                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm"
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm hover:bg-gray-700/60"
                 style={{ transition: 'transform 0.1s ease-out' }}
               >
                 <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-cyber-cyan">
@@ -207,6 +211,13 @@ const HeroSection = () => {
                     } as React.CSSProperties}
                   >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    <div 
+                      className="orbiting-light"
+                      style={{
+                        '--glow-color': social.gradientColor,
+                        animationDelay: `${index * 2}s`
+                      } as React.CSSProperties}
+                    ></div>
                     <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />
                   </div>
                 </Link>

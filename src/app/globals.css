@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
@@ -377,7 +378,7 @@
 }
 
 .animate-pulse-slow {
-  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes professionalPulse {
@@ -410,4 +411,24 @@
 @keyframes gradient-rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.orbiting-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+  animation: orbit 8s linear infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(35px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(35px) rotate(-360deg);
+  }
 }

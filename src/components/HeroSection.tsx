@@ -86,15 +86,30 @@ const HeroSection = () => {
           </div>
 
           {/* Skills preview */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 animate-fade-in-up" style={{
+          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up" style={{
             animationDelay: '0.4s'
           }}>
             {['React', 'Node.js', 'TypeScript', 'Python', 'Azure'].map((skill, index) => (
-              <span key={skill} className="px-3 py-1 text-sm bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-full text-cyber-cyan backdrop-blur-sm hover:bg-cyber-cyan/20 transition-all duration-300 animate-scale-in" style={{
-                animationDelay: `${0.5 + index * 0.1}s`
-              }}>
-                {skill}
-              </span>
+              <div 
+                key={skill} 
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 animate-scale-in"
+                style={{
+                  animationDelay: `${0.5 + index * 0.1}s`,
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                <div className="absolute inset-0 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 backdrop-blur-sm group-hover:bg-cyber-cyan/20 transition-all duration-300"></div>
+                
+                {/* Animated gradient border */}
+                <div className="absolute -inset-px rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                
+                {/* Glow effect */}
+                <div className="absolute -inset-2 rounded-full bg-cyber-cyan/20 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                
+                <span className="relative text-cyber-cyan text-sm font-medium transition-colors duration-300 group-hover:text-white" style={{ textShadow: '0 0 5px rgba(0, 255, 255, 0.5)' }}>
+                  {skill}
+                </span>
+              </div>
             ))}
           </div>
         </div>

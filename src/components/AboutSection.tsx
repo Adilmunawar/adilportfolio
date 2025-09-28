@@ -1,4 +1,4 @@
-
+'use client';
 import { Card } from '@/components/ui/card';
 import ProfileCard from './ProfileCard';
 import { useState, useEffect } from 'react';
@@ -17,8 +17,11 @@ const AboutSection = () => {
       setCurrentTextIndex((prev) => (prev + 1) % dynamicTexts.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [dynamicTexts.length]);
   useEffect(() => {
+    const aboutSection = document.getElementById('about-section-observer');
+    if(!aboutSection) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,15 +31,14 @@ const AboutSection = () => {
       { threshold: 0.3 }
     );
 
-    const section = document.getElementById('about-section');
-    if (section) observer.observe(section);
+    observer.observe(aboutSection);
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <section id="about" className="min-h-screen py-20 px-4 relative overflow-hidden bg-gradient-to-br from-cyber-dark via-cyber-gray/5 to-cyber-dark">
-      <div id="about-section" className="max-w-6xl mx-auto relative z-10">
+      <div id="about-section-observer" className="max-w-6xl mx-auto relative z-10">
         {/* Clean, professional title section */}
         <div className="text-center mb-16">
           <div className={`transition-all duration-1000 ${

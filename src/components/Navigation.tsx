@@ -1,6 +1,7 @@
-
+'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-300 hover:text-cyber-cyan px-3 py-2 text-sm font-medium transition-all duration-300 relative group"
@@ -35,7 +36,7 @@ const Navigation = () => {
                   
                   {/* Enhanced hover effect */}
                   <div className="absolute inset-0 bg-cyber-cyan/10 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -62,14 +63,14 @@ const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80 backdrop-blur-lg border-t border-cyber-cyan/20">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-gray-300 hover:text-cyber-cyan block px-3 py-2 text-base font-medium transition-colors duration-300 hover:bg-cyber-cyan/10 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

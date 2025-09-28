@@ -1,6 +1,7 @@
-
+'use client';
 import { Github, Instagram, Linkedin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const HeroSection = () => {
   const socialLinks = [{
@@ -110,7 +111,7 @@ const HeroSection = () => {
           animationDelay: '0.6s'
         }}>
           {socialLinks.map((social, index) => (
-            <a 
+            <Link 
               key={index} 
               href={social.href} 
               target="_blank" 
@@ -129,7 +130,7 @@ const HeroSection = () => {
               {/* Subtle hover effects */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${social.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               <div className="absolute inset-0 rounded-2xl border-2 border-cyber-cyan/30 scale-95 group-hover:scale-105 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-            </a>
+            </Link>
           ))}
         </div>
 

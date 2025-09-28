@@ -1,4 +1,4 @@
-
+'use client';
 import { Card } from '@/components/ui/card';
 import { Code, Smartphone, Search, Wrench, TrendingUp, Zap } from 'lucide-react';
 

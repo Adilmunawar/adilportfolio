@@ -1,8 +1,9 @@
-
+'use client';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Play, Pause, Code2, Sparkles } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const ProjectsSection = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -126,10 +127,11 @@ const ProjectsSection = () => {
               {/* Enhanced image container */}
               <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent z-10"></div>
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+                  layout="fill"
+                  className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
                 
                 {/* Overlay effects */}

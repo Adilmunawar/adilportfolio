@@ -1,4 +1,4 @@
-
+'use client';
 import { Card } from '@/components/ui/card';
 import { Mail, Phone, Github, Instagram, MessageSquare, Linkedin, Send, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';

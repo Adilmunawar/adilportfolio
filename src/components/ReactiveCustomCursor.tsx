@@ -1,8 +1,8 @@
-
+'use client';
 import { useState, useEffect } from 'react';
 
 const ReactiveCustomCursor = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
 
@@ -14,14 +14,14 @@ const ReactiveCustomCursor = () => {
     const handleMouseDown = () => setIsClicking(true);
     const handleMouseUp = () => setIsClicking(false);
 
-    const handleMouseEnter = (e: Event) => {
+    const handleMouseOver = (e: Event) => {
       const target = e.target as HTMLElement;
       if (target.matches('a, button, [role="button"], .cursor-pointer')) {
         setIsHovering(true);
       }
     };
 
-    const handleMouseLeave = (e: Event) => {
+    const handleMouseOut = (e: Event) => {
       const target = e.target as HTMLElement;
       if (target.matches('a, button, [role="button"], .cursor-pointer')) {
         setIsHovering(false);
@@ -31,15 +31,15 @@ const ReactiveCustomCursor = () => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('mouseover', handleMouseEnter);
-    document.addEventListener('mouseout', handleMouseLeave);
+    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mouseover', handleMouseEnter);
-      document.removeEventListener('mouseout', handleMouseLeave);
+      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 

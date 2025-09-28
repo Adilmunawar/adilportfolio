@@ -1,4 +1,4 @@
-
+'use client';
 import { useState, useEffect } from 'react';
 import GitHubStats from './GitHubStats';
 
@@ -6,6 +6,9 @@ const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const skillsSection = document.getElementById('skills-section-observer');
+    if(!skillsSection) return;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,8 +18,7 @@ const SkillsSection = () => {
       { threshold: 0.2 }
     );
 
-    const section = document.getElementById('skills-section');
-    if (section) observer.observe(section);
+    observer.observe(skillsSection);
 
     return () => observer.disconnect();
   }, []);
@@ -68,7 +70,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="min-h-screen py-20 px-4 relative overflow-hidden">
-      <div id="skills-section" className="max-w-7xl mx-auto relative z-10">
+      <div id="skills-section-observer" className="max-w-7xl mx-auto relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className={`text-5xl md:text-7xl font-bold mb-6 transition-all duration-1000 ${

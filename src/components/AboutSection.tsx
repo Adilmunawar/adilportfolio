@@ -2,11 +2,9 @@
 import { Card } from '@/components/ui/card';
 import ProfileCard from './ProfileCard';
 import { useState, useEffect } from 'react';
-
 const AboutSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const dynamicTexts = [
     "Passionate Developer",
     "Full-Stack Engineer", 
@@ -20,7 +18,6 @@ const AboutSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

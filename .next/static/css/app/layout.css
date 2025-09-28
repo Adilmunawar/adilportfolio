@@ -1745,6 +1745,9 @@ body{
 .bg-white\/5{
   background-color: rgb(255 255 255 / 0.05);
 }
+.bg-black\/60{
+  background-color: rgb(0 0 0 / 0.6);
+}
 .bg-\[radial-gradient\(circle_at_var\(--glow-x\)_var\(--glow-y\)\2c _rgba\(0\2c 255\2c 255\2c 0\.3\)_0\%\2c _rgba\(0\2c 128\2c 255\2c 0\)_50\%\)\]{
   background-image: radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(0,255,255,0.3) 0%, rgba(0,128,255,0) 50%);
 }
@@ -2598,6 +2601,10 @@ body{
 }
 .backdrop-blur-xl{
   --tw-backdrop-blur: blur(24px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-blur-md{
+  --tw-backdrop-blur: blur(12px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{

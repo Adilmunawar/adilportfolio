@@ -160,9 +160,9 @@ const SkillsSection = () => {
 
       {/* Optimized background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/3 rounded-full blur-3xl will-change-transform" style={{ animation: 'drift1 25s ease-in-out infinite' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/3 rounded-full blur-3xl will-change-transform" style={{ animation: 'drift2 30s ease-in-out infinite' }}></div>
-        <div className="absolute top-3/4 left-1/2 w-72 h-72 bg-purple-500/3 rounded-full blur-3xl will-change-transform" style={{ animation: 'drift3 35s ease-in-out infinite' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/3 rounded-full blur-3xl" style={{ animation: 'drift1 25s ease-in-out infinite' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/3 rounded-full blur-3xl" style={{ animation: 'drift2 30s ease-in-out infinite' }}></div>
+        <div className="absolute top-3/4 left-1/2 w-72 h-72 bg-purple-500/3 rounded-full blur-3xl" style={{ animation: 'drift3 35s ease-in-out infinite' }}></div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Github, Instagram, Linkedin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import React from 'react';
 
 const HeroSection = () => {
   const socialLinks = [{
@@ -86,27 +87,18 @@ const HeroSection = () => {
           </div>
 
           {/* Skills preview */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up" style={{
+          <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-in-up" style={{
             animationDelay: '0.4s'
           }}>
             {['React', 'Node.js', 'TypeScript', 'Python', 'Azure'].map((skill, index) => (
               <div 
                 key={skill} 
-                className="group relative px-4 py-2 rounded-full transition-all duration-300 animate-scale-in"
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm hover:bg-cyber-cyan/10 hover:border-cyber-cyan/40"
                 style={{
                   animationDelay: `${0.5 + index * 0.1}s`,
-                  transformStyle: 'preserve-3d'
                 }}
               >
-                <div className="absolute inset-0 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 backdrop-blur-sm group-hover:bg-cyber-cyan/20 transition-all duration-300"></div>
-                
-                {/* Animated gradient border */}
-                <div className="absolute -inset-px rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-                
-                {/* Glow effect */}
-                <div className="absolute -inset-2 rounded-full bg-cyber-cyan/20 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                
-                <span className="relative text-cyber-cyan text-sm font-medium transition-colors duration-300 group-hover:text-white" style={{ textShadow: '0 0 5px rgba(0, 255, 255, 0.5)' }}>
+                <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-cyber-cyan">
                   {skill}
                 </span>
               </div>
@@ -115,7 +107,7 @@ const HeroSection = () => {
         </div>
 
         {/* Redesigned social links with advanced animations */}
-        <div className="flex justify-center space-x-6 mb-12 animate-scale-in" style={{
+        <div className="flex justify-center space-x-4 mb-12 animate-scale-in" style={{
           animationDelay: '0.6s'
         }}>
           {socialLinks.map((social, index) => (
@@ -129,18 +121,11 @@ const HeroSection = () => {
                   aria-label={social.label}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${social.glowColor} to-cyber-blue rounded-full blur-md opacity-50 group-hover:opacity-100 transition duration-500 animate-pulse group-hover:animate-none`}></div>
-                  <div className="relative w-16 h-16 bg-cyber-dark rounded-full transition-transform duration-300 group-hover:scale-95">
-                    <div className={`absolute inset-0.5 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full`}></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div 
-                        className={`w-full h-full rounded-full transition-all duration-300 group-hover:translate-y-0.5
-                                    bg-gray-900 border-2 border-gray-700/50 
-                                    flex items-center justify-center`}
-                      >
-                         <social.Icon size={28} className={`${social.color} transition-all duration-300 group-hover:scale-110`} />
-                      </div>
-                    </div>
+                  <div className="absolute -inset-1.5 bg-gradient-to-r from-cyber-cyan to-cyber-blue rounded-full blur opacity-50 group-hover:opacity-75 transition-all duration-500 animate-pulse group-hover:animate-none"></div>
+                  
+                  <div className="relative w-14 h-14 bg-cyber-dark rounded-full transition-transform duration-300 group-hover:scale-95 flex items-center justify-center border-2 border-cyber-cyan/30 group-hover:border-cyber-cyan/50">
+                    <div className={`absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full opacity-80 group-hover:opacity-60 transition-opacity duration-300`}></div>
+                    <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-110 relative z-10`} />
                   </div>
                 </Link>
               </TooltipTrigger>
@@ -188,5 +173,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-    

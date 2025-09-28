@@ -20,7 +20,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-gradient animate-shimmer">ADILMUNAWAR</span>
+            <Link href="#home" className="text-2xl font-bold text-gradient animate-shimmer">
+              ADILMUNAWAR
+            </Link>
           </div>
           
           <div className="hidden md:block">
@@ -41,17 +43,11 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-cyber-cyan rounded-full animate-pulse"></span>
-              <span className="w-2 h-2 bg-cyber-blue rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></span>
-            </div>
-          </div>
-
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-cyber-cyan transition-colors duration-300"
+              aria-label="Toggle mobile menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

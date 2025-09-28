@@ -2043,6 +2043,11 @@ body{
   --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-white\/10{
+  --tw-gradient-from: rgb(255 255 255 / 0.1) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .via-cyan-500{
   --tw-gradient-to: rgb(6 182 212 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #06b6d4 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2581,6 +2586,9 @@ body{
 }
 .opacity-90{
   opacity: 0.9;
+}
+.opacity-40{
+  opacity: 0.4;
 }
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);

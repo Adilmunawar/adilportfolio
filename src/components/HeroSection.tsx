@@ -156,16 +156,30 @@ const HeroSection = () => {
           animationDelay: '0.8s'
         }}>
           <Button 
-            className="relative bg-cyber-cyan text-black hover:bg-cyber-blue px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 glow-effect hover:shadow-xl hover:shadow-cyber-cyan/30 backdrop-blur-sm border border-cyber-cyan/50 group overflow-hidden" 
+            className="group relative inline-flex items-center justify-center rounded-full bg-transparent px-8 py-4 text-lg font-bold text-white transition-all duration-500 overflow-hidden" 
+            style={{
+              border: '2px solid transparent',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box',
+              backgroundImage: `linear-gradient(to right, #1a1a2e, #1a1a2e), linear-gradient(90deg, #00ffff, #0080ff, #8000ff, #ff0080)`,
+              animation: 'professionalGradientMove 15s ease infinite',
+              backgroundSize: '100% 100%, 400% 400%',
+              transformStyle: 'preserve-3d',
+            }}
             onClick={() => document.getElementById('about')?.scrollIntoView({
               behavior: 'smooth'
             })}
           >
-            <span className="relative z-10 flex items-center gap-2 group-hover:translate-x-1 transition-transform duration-300">
+            <div className="absolute inset-0 bg-cyber-dark opacity-40 group-hover:opacity-20 transition-opacity duration-500"></div>
+            <div 
+              className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              style={{
+                background: 'radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.25) 0%, rgba(0, 128, 255, 0) 60%)',
+              }}
+            ></div>
+            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(0, 255, 255, 0.5)' }}>
               Explore My Work →
             </span>
-            
-            <div className="absolute inset-0 bg-gradient-to-r from-cyber-blue to-cyber-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Button>
         </div>
       </div>
@@ -174,3 +188,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+    

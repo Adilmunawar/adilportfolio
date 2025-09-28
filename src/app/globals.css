@@ -393,3 +393,21 @@
     opacity: .4;
   }
 }
+
+.animate-social-icon-pulse {
+  animation: social-icon-pulse 6s ease-in-out infinite;
+}
+
+@keyframes social-icon-pulse {
+  0%, 100% { box-shadow: 0 0 20px -5px var(--glow-color-start); }
+  50% { box-shadow: 0 0 30px 5px var(--glow-color-end); }
+}
+
+.animate-gradient-rotate {
+  animation: gradient-rotate 4s linear infinite;
+}
+
+@keyframes gradient-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

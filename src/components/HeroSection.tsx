@@ -6,39 +6,44 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import React, { useRef, useState, useEffect } from 'react';
 
 const HeroSection = () => {
-  const socialLinks = [{
-    Icon: Instagram,
-    href: 'https://instagram.com/adilmunawarx',
-    label: 'Instagram',
-    color: 'text-pink-400',
-    shadow: 'shadow-pink-500/50',
-    buttonBg: 'bg-pink-500',
-    glowColor: 'from-pink-500'
-  }, {
-    Icon: Github,
-    href: 'https://github.com/adilmunawar',
-    label: 'GitHub',
-    color: 'text-gray-300',
-    shadow: 'shadow-gray-500/50',
-    buttonBg: 'bg-gray-500',
-    glowColor: 'from-gray-500'
-  }, {
-    Icon: Linkedin,
-    href: 'https://linkedin.com/in/adilmunawar',
-    label: 'LinkedIn',
-    color: 'text-blue-400',
-    shadow: 'shadow-blue-500/50',
-    buttonBg: 'bg-blue-500',
-    glowColor: 'from-blue-500'
-  }, {
-    Icon: Phone,
-    href: 'tel:+923244965220',
-    label: 'Phone',
-    color: 'text-green-400',
-    shadow: 'shadow-green-500/50',
-    buttonBg: 'bg-green-500',
-    glowColor: 'from-green-500'
-  }];
+  const socialLinks = [
+    {
+      Icon: Instagram,
+      href: 'https://instagram.com/adilmunawarx',
+      label: 'Instagram',
+      color: 'text-pink-400',
+      glowColorStart: 'rgba(236, 72, 153, 0.4)',
+      glowColorEnd: 'rgba(219, 39, 119, 0.7)',
+      gradientColor: '#ec4899',
+    },
+    {
+      Icon: Github,
+      href: 'https://github.com/adilmunawar',
+      label: 'GitHub',
+      color: 'text-gray-300',
+      glowColorStart: 'rgba(156, 163, 175, 0.4)',
+      glowColorEnd: 'rgba(107, 114, 128, 0.7)',
+      gradientColor: '#9ca3af',
+    },
+    {
+      Icon: Linkedin,
+      href: 'https://linkedin.com/in/adilmunawar',
+      label: 'LinkedIn',
+      color: 'text-blue-400',
+      glowColorStart: 'rgba(96, 165, 250, 0.4)',
+      glowColorEnd: 'rgba(59, 130, 246, 0.7)',
+      gradientColor: '#60a5fa',
+    },
+    {
+      Icon: Phone,
+      href: 'tel:+923244965220',
+      label: 'Phone',
+      color: 'text-green-400',
+      glowColorStart: 'rgba(74, 222, 128, 0.4)',
+      glowColorEnd: 'rgba(34, 197, 94, 0.7)',
+      gradientColor: '#4ade80',
+    },
+  ];
 
   const skills = ['React', 'Node.js', 'TypeScript', 'Python', 'Azure'];
   const skillRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -190,8 +195,17 @@ const HeroSection = () => {
                   className="group relative"
                   aria-label={social.label}
                 >
-                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-75 transition-all duration-300 blur-md animate-pulse-slow group-hover:animate-none"></div>
-                  <div className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-gray-600/80">
+                  <div 
+                    className="absolute -inset-0.5 rounded-full bg-transparent group-hover:bg-[conic-gradient(from_90deg_at_50%_50%,#27272a_50%,var(--gradient-color)_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-rotate"
+                    style={{ '--gradient-color': social.gradientColor } as React.CSSProperties}
+                  ></div>
+                  <div 
+                    className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-transparent"
+                    style={{
+                      '--glow-color-start': social.glowColorStart,
+                      '--glow-color-end': social.glowColorEnd,
+                    } as React.CSSProperties}
+                  >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
                     <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />
                   </div>

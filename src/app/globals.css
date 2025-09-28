@@ -395,7 +395,7 @@
 }
 
 .animate-social-icon-pulse {
-  animation: social-icon-pulse 6s ease-in-out infinite;
+  animation: social-icon-pulse 4s ease-in-out infinite;
 }
 
 @keyframes social-icon-pulse {

@@ -3,7 +3,7 @@ import { Github, Instagram, Linkedin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const socialLinks = [{
@@ -39,6 +39,81 @@ const HeroSection = () => {
     buttonBg: 'bg-green-500',
     glowColor: 'from-green-500'
   }];
+
+  const skills = ['React', 'Node.js', 'TypeScript', 'Python', 'Azure'];
+  const skillRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent, index: number) => {
+      const ref = skillRefs.current[index];
+      if (!ref) return;
+
+      const rect = ref.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const rotateX = (y / rect.height - 0.5) * -20; // Tilt range
+      const rotateY = (x / rect.width - 0.5) * 20;
+
+      ref.style.setProperty('--rotate-x', `${rotateX}deg`);
+      ref.style.setProperty('--rotate-y', `${rotateY}deg`);
+      ref.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+    };
+
+    const handleMouseLeave = (index: number) => {
+      const ref = skillRefs.current[index];
+      if (!ref) return;
+      ref.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    };
+
+    skillRefs.current.forEach((ref, index) => {
+      if (ref) {
+        ref.addEventListener('mousemove', (e) => handleMouseMove(e, index));
+        ref.addEventListener('mouseleave', () => handleMouseLeave(index));
+      }
+    });
+
+    return () => {
+      skillRefs.current.forEach((ref, index) => {
+        if (ref) {
+          ref.removeEventListener('mousemove', (e) => handleMouseMove(e, index));
+          ref.removeEventListener('mouseleave', () => handleMouseLeave(index));
+        }
+      });
+    };
+  }, []);
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const button = buttonRef.current;
+    if (!button) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = button.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const rotateX = (y / rect.height - 0.5) * -15;
+      const rotateY = (x / rect.width - 0.5) * 15;
+
+      button.style.setProperty('--glow-x', `${x}px`);
+      button.style.setProperty('--glow-y', `${y}px`);
+      button.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+    };
+
+    const handleMouseLeave = () => {
+      button.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    };
+
+    button.addEventListener('mousemove', handleMouseMove);
+    button.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      button.removeEventListener('mousemove', handleMouseMove);
+      button.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 relative overflow-hidden">
@@ -87,20 +162,18 @@ const HeroSection = () => {
           </div>
 
           {/* Skills preview */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-in-up" style={{
-            animationDelay: '0.4s'
-          }}>
-            {['React', 'Node.js', 'TypeScript', 'Python', 'Azure'].map((skill, index) => (
-              <div 
-                key={skill} 
-                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm hover:bg-cyber-cyan/10 hover:border-cyber-cyan/40"
-                style={{
-                  animationDelay: `${0.5 + index * 0.1}s`,
-                }}
+          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            {skills.map((skill, index) => (
+              <div
+                key={skill}
+                ref={(el) => (skillRefs.current[index] = el)}
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm"
+                style={{ transition: 'transform 0.1s ease-out' }}
               >
                 <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-cyber-cyan">
                   {skill}
                 </span>
+                <div className="absolute -inset-px rounded-full bg-cyber-cyan/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
               </div>
             ))}
           </div>
@@ -119,13 +192,11 @@ const HeroSection = () => {
                   rel="noopener noreferrer" 
                   className="group relative"
                   aria-label={social.label}
-                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="absolute -inset-1.5 bg-gradient-to-r from-cyber-cyan to-cyber-blue rounded-full blur opacity-50 group-hover:opacity-75 transition-all duration-500 animate-pulse group-hover:animate-none"></div>
-                  
-                  <div className="relative w-14 h-14 bg-cyber-dark rounded-full transition-transform duration-300 group-hover:scale-95 flex items-center justify-center border-2 border-cyber-cyan/30 group-hover:border-cyber-cyan/50">
-                    <div className={`absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full opacity-80 group-hover:opacity-60 transition-opacity duration-300`}></div>
-                    <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-110 relative z-10`} />
+                  <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-75 transition-all duration-300 blur-md animate-pulse group-hover:animate-none"></div>
+                  <div className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-gray-600/80">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />
                   </div>
                 </Link>
               </TooltipTrigger>
@@ -137,30 +208,25 @@ const HeroSection = () => {
         </div>
 
         {/* Professional CTA button */}
-        <div className="animate-fade-in-up" style={{
-          animationDelay: '0.8s'
-        }}>
-          <Button 
-            className="group relative inline-flex items-center justify-center rounded-full bg-transparent px-8 py-4 text-lg font-bold text-white transition-all duration-500 overflow-hidden" 
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <Button
+            ref={buttonRef}
+            className="group relative inline-flex items-center justify-center rounded-full bg-transparent px-8 py-4 text-lg font-bold text-white overflow-hidden"
             style={{
-              border: '2px solid transparent',
-              backgroundOrigin: 'border-box',
-              backgroundClip: 'content-box, border-box',
-              backgroundImage: `linear-gradient(to right, #1a1a2e, #1a1a2e), linear-gradient(90deg, #00ffff, #0080ff, #8000ff, #ff0080)`,
-              animation: 'professionalGradientMove 15s ease infinite',
-              backgroundSize: '100% 100%, 400% 400%',
+              transition: 'transform 0.1s ease-out',
               transformStyle: 'preserve-3d',
-            }}
-            onClick={() => document.getElementById('about')?.scrollIntoView({
-              behavior: 'smooth'
-            })}
+              '--aurora-speed': '30s',
+              '--aurora-size': '400%',
+              '--aurora-x': '50%',
+              '--aurora-y': '50%',
+            } as React.CSSProperties}
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <div className="absolute inset-0 bg-cyber-dark opacity-40 group-hover:opacity-20 transition-opacity duration-500"></div>
-            <div 
-              className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-              style={{
-                background: 'radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.25) 0%, rgba(0, 128, 255, 0) 60%)',
-              }}
+            <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-cyber-cyan via-cyber-blue to-cyber-purple opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 rounded-full bg-cyber-dark"></div>
+            <div
+              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(0,255,255,0.3)_0%,_rgba(0,128,255,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ '--glow-x': '50%', '--glow-y': '50%' } as React.CSSProperties}
             ></div>
             <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(0, 255, 255, 0.5)' }}>
               Explore My Work →

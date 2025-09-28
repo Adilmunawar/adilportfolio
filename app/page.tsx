@@ -6,12 +6,10 @@ import SkillsSection from '@/components/SkillsSection';
 import ServicesSection from '@/components/ServicesSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
-import ReactiveCustomCursor from '@/components/ReactiveCustomCursor';
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-cyber-dark">
-      <ReactiveCustomCursor />
       <FloatingShapes />
       <Navigation />
       

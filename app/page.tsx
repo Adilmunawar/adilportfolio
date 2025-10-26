@@ -1,28 +1,16 @@
 import Navigation from '@/components/Navigation';
-import Spline from '@splinetool/react-spline/next';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ServicesSection from '@/components/ServicesSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
+import ReactiveTileBackground from '@/components/ReactiveTileBackground';
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-cyber-dark">
-      <div style={{ 
-        width: '100vw', 
-        height: '100vh', 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        zIndex: 0,
-        transform: 'scale(1.1) translateX(2%)',
-      }}>
-        <Spline
-          scene="https://prod.spline.design/AvF-dvRCaMAo12qX/scene.splinecode" 
-        />
-      </div>
+      <ReactiveTileBackground />
       <Navigation />
       
       <main className="relative z-10">

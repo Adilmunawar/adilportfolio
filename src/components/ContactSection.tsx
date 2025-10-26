@@ -111,15 +111,7 @@ const ContactSection = () => {
     dotColor: 'bg-green-400'
   }];
   return (
-    <section id="contact" className="min-h-screen py-20 px-4 relative overflow-hidden bg-gradient-to-b from-gray-900 to-cyber-dark">
-      {/* Dark theme background */}
-      <div className="absolute inset-0 bg-cyber-dark/90"></div>
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      {/* Animated background orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyber-cyan/5 to-blue-500/5 rounded-full blur-3xl animate-drift-1"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-drift-2"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-green-500/3 to-cyan-500/3 rounded-full blur-3xl animate-drift-3"></div>
-      
+    <section id="contact" className="min-h-screen py-20 px-4 relative">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced header section */}
         <div className="text-center mb-20">
@@ -268,3 +260,5 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
+    

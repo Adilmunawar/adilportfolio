@@ -21,18 +21,18 @@ const HeroSection = () => {
       href: 'https://github.com/adilmunawar',
       label: 'GitHub',
       color: 'text-gray-300',
-      glowColorStart: 'rgba(156, 163, 175, 0.4)',
-      glowColorEnd: 'rgba(107, 114, 128, 0.7)',
-      gradientColor: '#9ca3af',
+      glowColorStart: 'rgba(0, 255, 255, 0.4)',
+      glowColorEnd: 'rgba(0, 255, 255, 0.7)',
+      gradientColor: '#00ffff',
     },
     {
       Icon: Linkedin,
       href: 'https://linkedin.com/in/adilmunawar',
       label: 'LinkedIn',
       color: 'text-blue-400',
-      glowColorStart: 'rgba(96, 165, 250, 0.4)',
-      glowColorEnd: 'rgba(59, 130, 246, 0.7)',
-      gradientColor: '#60a5fa',
+      glowColorStart: 'rgba(0, 255, 255, 0.4)',
+      glowColorEnd: 'rgba(0, 255, 255, 0.7)',
+      gradientColor: '#00ffff',
     },
     {
       Icon: Phone,
@@ -227,3 +227,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+    

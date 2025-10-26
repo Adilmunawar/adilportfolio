@@ -45,7 +45,7 @@ const Navigation = () => {
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 border-b border-cyber-cyan/20 transition-all duration-300",
-      scrolled ? "bg-black/60 backdrop-blur-lg" : "bg-black/20 backdrop-blur-md"
+      scrolled ? "bg-cyber-dark/80 backdrop-blur-lg" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -92,7 +92,7 @@ const Navigation = () => {
 
       {isOpen && (
         <div className="md:hidden transform transition-transform duration-300 ease-in-out">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80 backdrop-blur-lg border-t border-cyber-cyan/20">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-cyber-dark/90 backdrop-blur-lg border-t border-cyber-cyan/20">
             {navItems.map((item, index) => (
               <Link
                 key={item.name}
@@ -112,3 +112,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+    

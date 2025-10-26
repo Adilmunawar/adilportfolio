@@ -11,104 +11,104 @@ const ContactSection = () => {
     value: 'adilmunawar@gmail.com',
     description: 'Drop me a line anytime',
     link: 'mailto:adilmunawar@gmail.com',
-    color: 'text-red-400',
-    bgColor: 'from-red-800/5 to-pink-800/5',
-    hoverColor: 'hover:from-red-800/15 hover:to-pink-800/15',
-    borderColor: 'border-red-700/20 hover:border-red-700/40',
-    glowColor: 'shadow-red-800/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }, {
     Icon: Phone,
     label: 'WhatsApp',
     value: '+92 324 4965220',
     description: 'Quick chat & instant replies',
     link: 'https://wa.me/923244965220',
-    color: 'text-green-400',
-    bgColor: 'from-green-800/5 to-emerald-800/5',
-    hoverColor: 'hover:from-green-800/15 hover:to-emerald-800/15',
-    borderColor: 'border-green-700/20 hover:border-green-700/40',
-    glowColor: 'shadow-green-800/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }, {
     Icon: Instagram,
     label: 'Instagram',
     value: '@adilmunawarx',
     description: 'Creative content & stories',
     link: 'https://instagram.com/adilmunawarx',
-    color: 'text-pink-400',
-    bgColor: 'from-pink-800/5 to-purple-800/5',
-    hoverColor: 'hover:from-pink-800/15 hover:to-purple-800/15',
-    borderColor: 'border-pink-700/20 hover:border-pink-700/40',
-    glowColor: 'shadow-pink-800/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }, {
     Icon: MessageSquare,
     label: 'Telegram',
     value: '@adilmunawarx',
     description: 'Secure messaging platform',
     link: 'https://t.me/adilmunawar',
-    color: 'text-blue-400',
-    bgColor: 'from-blue-800/5 to-cyan-800/5',
-    hoverColor: 'hover:from-blue-800/15 hover:to-cyan-800/15',
-    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
-    glowColor: 'shadow-blue-800/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }, {
     Icon: Linkedin,
     label: 'LinkedIn',
     value: 'Professional Network',
     description: 'Connect for opportunities',
     link: 'https://linkedin.com/in/adilmunawar',
-    color: 'text-blue-500',
-    bgColor: 'from-blue-800/5 to-indigo-800/5',
-    hoverColor: 'hover:from-blue-800/15 hover:to-indigo-800/15',
-    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
-    glowColor: 'shadow-blue-800/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }, {
     Icon: Github,
     label: 'GitHub',
     value: 'Open Source Projects',
     description: 'Explore my repositories',
     link: 'https://github.com/adilmunawar',
-    color: 'text-gray-400',
-    bgColor: 'from-gray-700/5 to-slate-700/5',
-    hoverColor: 'hover:from-gray-700/15 hover:to-slate-700/15',
-    borderColor: 'border-gray-600/20 hover:border-gray-600/40',
-    glowColor: 'shadow-gray-700/10'
+    color: 'text-primary',
+    bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
+    hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    glowColor: 'shadow-cyber-purple/10'
   }];
 
   const footerSocials = [{
     Icon: Linkedin,
     link: 'https://linkedin.com/in/adilmunawar',
-    color: 'hover:text-blue-400',
-    bgGradient: 'from-blue-800/10 to-indigo-800/10',
-    hoverGradient: 'hover:from-blue-800/25 hover:to-indigo-800/25',
-    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
-    shadowColor: 'hover:shadow-blue-800/20',
-    dotColor: 'bg-blue-400'
+    color: 'hover:text-white',
+    bgGradient: 'from-cyber-purple/10 to-cyber-blue/10',
+    hoverGradient: 'hover:from-cyber-purple/25 hover:to-cyber-blue/25',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    shadowColor: 'hover:shadow-cyber-purple/20',
+    dotColor: 'bg-cyber-blue'
   }, {
     Icon: Github,
     link: 'https://github.com/adilmunawar',
-    color: 'hover:text-gray-300',
-    bgGradient: 'from-gray-700/10 to-slate-700/10',
-    hoverGradient: 'hover:from-gray-700/25 hover:to-slate-700/25',
-    borderColor: 'border-gray-600/20 hover:border-gray-600/40',
-    shadowColor: 'hover:shadow-gray-700/20',
-    dotColor: 'bg-gray-300'
+    color: 'hover:text-white',
+    bgGradient: 'from-cyber-purple/10 to-cyber-blue/10',
+    hoverGradient: 'hover:from-cyber-purple/25 hover:to-cyber-blue/25',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    shadowColor: 'hover:shadow-cyber-purple/20',
+    dotColor: 'bg-cyber-blue'
   }, {
     Icon: Instagram,
     link: 'https://instagram.com/adilmunawarx',
-    color: 'hover:text-pink-400',
-    bgGradient: 'from-pink-800/10 to-purple-800/10',
-    hoverGradient: 'hover:from-pink-800/25 hover:to-purple-800/25',
-    borderColor: 'border-pink-700/20 hover:border-pink-700/40',
-    shadowColor: 'hover:shadow-pink-800/20',
-    dotColor: 'bg-pink-400'
+    color: 'hover:text-white',
+    bgGradient: 'from-cyber-purple/10 to-cyber-blue/10',
+    hoverGradient: 'hover:from-cyber-purple/25 hover:to-cyber-blue/25',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    shadowColor: 'hover:shadow-cyber-purple/20',
+    dotColor: 'bg-cyber-blue'
   }, {
     Icon: Phone,
     link: 'https://wa.me/+923244965220',
-    color: 'hover:text-green-400',
-    bgGradient: 'from-green-800/10 to-emerald-800/10',
-    hoverGradient: 'hover:from-green-800/25 hover:to-emerald-800/25',
-    borderColor: 'border-green-700/20 hover:border-green-700/40',
-    shadowColor: 'hover:shadow-green-800/20',
-    dotColor: 'bg-green-400'
+    color: 'hover:text-white',
+    bgGradient: 'from-cyber-purple/10 to-cyber-blue/10',
+    hoverGradient: 'hover:from-cyber-purple/25 hover:to-cyber-blue/25',
+    borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
+    shadowColor: 'hover:shadow-cyber-purple/20',
+    dotColor: 'bg-cyber-blue'
   }];
   return (
     <section id="contact" className="min-h-screen py-20 px-4 relative bg-transparent">
@@ -167,7 +167,7 @@ const ContactSection = () => {
                 {/* Enhanced text content */}
                 <h3 className="font-bold text-xl text-gray-300 mb-2 group-hover:text-white transition-colors duration-500">{method.label}</h3>
                 <p className="text-gray-500 text-sm mb-3 group-hover:text-gray-400 transition-colors duration-500">{method.description}</p>
-                <p className={`${method.color} text-sm font-semibold group-hover:text-white transition-colors duration-500`}>{method.value}</p>
+                <p className={`text-sm font-semibold group-hover:text-white transition-colors duration-500 text-cyber-cyan`}>{method.value}</p>
                 
                 {/* Hover effect indicator */}
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
@@ -220,7 +220,7 @@ const ContactSection = () => {
                   href={social.link} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className={`group relative w-16 h-16 bg-gradient-to-br ${social.bgGradient} ${social.hoverGradient} rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 backdrop-blur-sm border-2 ${social.borderColor} hover:shadow-2xl ${social.shadowColor} ${social.color}`}
+                  className={`group relative w-16 h-16 bg-gradient-to-br ${social.bgGradient} ${social.hoverGradient} rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 backdrop-blur-sm border-2 ${social.borderColor} hover:shadow-2xl ${social.shadowColor} text-primary`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <social.Icon size={24} className="transition-all duration-500 group-hover:scale-110" />

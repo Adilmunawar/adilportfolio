@@ -88,7 +88,7 @@
 
 /* Professional gradient text - slower and more subtle */
 .text-gradient {
-  background: linear-gradient(90deg, #00ffff, #0080ff, #00ffff);
+  background: linear-gradient(90deg, #8A2BE2, #4B0082, #8A2BE2);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -98,7 +98,7 @@
 
 /* Slower professional gradient text */
 .text-gradient-slow {
-  background: linear-gradient(90deg, #00ffff, #0080ff, #00ffff);
+  background: linear-gradient(90deg, #8A2BE2, #4B0082, #8A2BE2);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

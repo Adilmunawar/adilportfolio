@@ -16,7 +16,7 @@ export default function Home() {
         position: 'fixed',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%) scale(1.1)',
+        transform: 'translate(-50%, -50%) scale(1.2)',
         zIndex: 0,
         pointerEvents: 'none'
       }}>

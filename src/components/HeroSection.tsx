@@ -11,7 +11,7 @@ const HeroSection = () => {
       Icon: Instagram,
       href: 'https://instagram.com/adilmunawarx',
       label: 'Instagram',
-      color: 'text-pink-400',
+      color: 'text-gray-400',
       glowColorStart: 'rgba(236, 72, 153, 0.4)',
       glowColorEnd: 'rgba(219, 39, 119, 0.7)',
       gradientColor: 'var(--cyber-purple)',
@@ -20,7 +20,7 @@ const HeroSection = () => {
       Icon: Github,
       href: 'https://github.com/adilmunawar',
       label: 'GitHub',
-      color: 'text-gray-300',
+      color: 'text-gray-400',
       glowColorStart: 'rgba(59, 29, 138, 0.4)',
       glowColorEnd: 'rgba(59, 29, 138, 0.7)',
       gradientColor: 'var(--cyber-purple)',
@@ -29,7 +29,7 @@ const HeroSection = () => {
       Icon: Linkedin,
       href: 'https://linkedin.com/in/adilmunawar',
       label: 'LinkedIn',
-      color: 'text-blue-400',
+      color: 'text-gray-400',
       glowColorStart: 'rgba(67, 56, 202, 0.4)',
       glowColorEnd: 'rgba(67, 56, 202, 0.7)',
       gradientColor: 'var(--cyber-blue)',
@@ -38,7 +38,7 @@ const HeroSection = () => {
       Icon: Phone,
       href: 'tel:+923244965220',
       label: 'Phone',
-      color: 'text-green-400',
+      color: 'text-gray-400',
       glowColorStart: 'rgba(74, 222, 128, 0.4)',
       glowColorEnd: 'rgba(34, 197, 94, 0.7)',
       gradientColor: 'var(--cyber-blue)',
@@ -223,3 +223,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+    

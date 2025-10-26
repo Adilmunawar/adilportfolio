@@ -151,7 +151,6 @@ const HeroSection = () => {
                 <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-white">
                   {skill}
                 </span>
-                <div className="absolute -inset-px rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
               </div>
             ))}
           </div>
@@ -172,14 +171,14 @@ const HeroSection = () => {
                   aria-label={social.label}
                 >
                   <div 
-                    className="absolute -inset-0.5 rounded-full bg-transparent group-hover:bg-[conic-gradient(from_90deg_at_50%_50%,#27272a_50%,var(--gradient-color)_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-rotate"
+                    className="absolute -inset-0.5 rounded-full bg-transparent group-hover:bg-[conic-gradient(from_90deg_at_50%_50%,var(--cyber-purple)_50%,var(--gradient-color)_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-rotate"
                     style={{ '--gradient-color': social.gradientColor } as React.CSSProperties}
                   ></div>
                   <div 
                     className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-transparent animate-social-icon-pulse"
                     style={{
-                      '--glow-color-start': 'rgba(59, 59, 88, 0.4)',
-                      '--glow-color-end': 'rgba(42, 42, 62, 0.7)',
+                      '--glow-color-start': 'var(--cyber-purple)',
+                      '--glow-color-end': 'var(--cyber-blue)',
                     } as React.CSSProperties}
                   >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>

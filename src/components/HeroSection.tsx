@@ -160,7 +160,7 @@ const HeroSection = () => {
             {skills.map((skill, index) => (
               <div
                 key={skill}
-                ref={(el) => (skillRefs.current[index] = el)}
+                ref={(el) => { skillRefs.current[index] = el; }}
                 className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm hover:bg-gray-700/60"
                 style={{ transition: 'transform 0.1s ease-out' }}
               >

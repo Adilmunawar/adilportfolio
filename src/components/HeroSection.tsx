@@ -14,7 +14,7 @@ const HeroSection = () => {
       color: 'text-pink-400',
       glowColorStart: 'rgba(236, 72, 153, 0.4)',
       glowColorEnd: 'rgba(219, 39, 119, 0.7)',
-      gradientColor: '#ec4899',
+      gradientColor: 'var(--cyber-purple)',
     },
     {
       Icon: Github,
@@ -23,7 +23,7 @@ const HeroSection = () => {
       color: 'text-gray-300',
       glowColorStart: 'rgba(149, 117, 234, 0.4)',
       glowColorEnd: 'rgba(149, 117, 234, 0.7)',
-      gradientColor: '#9575ea',
+      gradientColor: 'var(--cyber-purple)',
     },
     {
       Icon: Linkedin,
@@ -32,7 +32,7 @@ const HeroSection = () => {
       color: 'text-blue-400',
       glowColorStart: 'rgba(99, 102, 241, 0.4)',
       glowColorEnd: 'rgba(99, 102, 241, 0.7)',
-      gradientColor: '#6366f1',
+      gradientColor: 'var(--cyber-blue)',
     },
     {
       Icon: Phone,
@@ -41,7 +41,7 @@ const HeroSection = () => {
       color: 'text-green-400',
       glowColorStart: 'rgba(74, 222, 128, 0.4)',
       glowColorEnd: 'rgba(34, 197, 94, 0.7)',
-      gradientColor: '#4ade80',
+      gradientColor: 'var(--cyber-blue)',
     },
   ];
 
@@ -148,6 +148,7 @@ const HeroSection = () => {
                 className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-white/10 backdrop-blur-sm hover:bg-gray-700/60"
                 style={{ transition: 'transform 0.1s ease-out' }}
               >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-md"></div>
                 <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-white">
                   {skill}
                 </span>

@@ -123,22 +123,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 relative overflow-hidden">
-      {/* Subtle background with slower animations */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-gray/10 to-cyber-dark opacity-90"></div>
-      
-      {/* Reduced background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full animate-pulse-slow" style={{
-          animationDelay: '2s'
-        }}></div>
-      </div>
-
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="w-full h-full bg-grid-pattern"></div>
-      </div>
-      
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="animate-fade-in-up">
           {/* Professional name with subtle effects */}

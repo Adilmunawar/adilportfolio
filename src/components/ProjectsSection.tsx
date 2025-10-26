@@ -75,16 +75,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-20 px-4 relative overflow-hidden bg-gradient-to-b from-cyber-dark to-gray-900">
-      {/* Dark theme background */}
-      <div className="absolute inset-0 bg-cyber-dark/90"></div>
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
-      {/* Floating background elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl animate-float-delayed"></div>
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500/3 to-emerald-500/3 rounded-full blur-3xl animate-drift-1"></div>
-      
+    <section id="projects" className="min-h-screen py-20 px-4 relative">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced header */}
         <div className="text-center mb-20 animate-fade-in-up">

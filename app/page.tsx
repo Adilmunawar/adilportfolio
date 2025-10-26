@@ -19,7 +19,7 @@ export default function Home() {
         zIndex: 0 
       }}>
         <Spline
-          scene="https://prod.spline.design/ACuJO1BUAtt0Evbz/scene.splinecode" 
+          scene="https://prod.spline.design/AvF-dvRCaMAo12qX/scene.splinecode" 
         />
       </div>
       <Navigation />

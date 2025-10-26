@@ -145,13 +145,13 @@ const HeroSection = () => {
               <div
                 key={skill}
                 ref={(el) => { skillRefs.current[index] = el; }}
-                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-[var(--cyber-purple)]/20 backdrop-blur-sm hover:bg-gray-700/60"
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-white/10 backdrop-blur-sm hover:bg-gray-700/60"
                 style={{ transition: 'transform 0.1s ease-out' }}
               >
-                <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-[var(--cyber-cyan)]">
+                <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-white">
                   {skill}
                 </span>
-                <div className="absolute -inset-px rounded-full bg-[var(--cyber-purple)]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
+                <div className="absolute -inset-px rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
               </div>
             ))}
           </div>
@@ -178,13 +178,13 @@ const HeroSection = () => {
                   <div 
                     className="relative w-14 h-14 bg-cyber-dark rounded-full transition-all duration-300 group-hover:scale-110 flex items-center justify-center border-2 border-gray-700/60 group-hover:border-transparent animate-social-icon-pulse"
                     style={{
-                      '--glow-color-start': social.glowColorStart,
-                      '--glow-color-end': social.glowColorEnd,
+                      '--glow-color-start': 'rgba(59, 59, 88, 0.4)',
+                      '--glow-color-end': 'rgba(42, 42, 62, 0.7)',
                     } as React.CSSProperties}
                   >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
                     
-                    <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 relative z-10`} />
+                    <social.Icon size={26} className={`${social.color} transition-all duration-300 group-hover:scale-125 group-hover:text-white relative z-10`} />
                   </div>
                 </Link>
               </TooltipTrigger>
@@ -206,13 +206,13 @@ const HeroSection = () => {
             } as React.CSSProperties}
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-[var(--cyber-purple)] via-[var(--cyber-blue)] to-[var(--cyber-cyan)] opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-[var(--cyber-purple)] via-[var(--cyber-blue)] to-[var(--cyber-purple)] opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-full bg-cyber-dark"></div>
             <div
-              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(149,117,234,0.3)_0%,_rgba(99,102,241,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(59,59,88,0.3)_0%,_rgba(42,42,62,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               style={{ '--glow-x': '50%', '--glow-y': '50%' } as React.CSSProperties}
             ></div>
-            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(149, 117, 234, 0.5)' }}>
+            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(59, 59, 88, 0.5)' }}>
               Explore My Work →
             </span>
           </Button>

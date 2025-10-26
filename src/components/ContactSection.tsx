@@ -125,17 +125,17 @@ const ContactSection = () => {
           </h2>
           <p className="text-xl text-gray-400 animate-fade-in-up max-w-4xl mx-auto leading-relaxed" style={{ animationDelay: '0.2s' }}>
             Ready to start a conversation? Choose your preferred 
-            <span className="text-[var(--cyber-cyan)] font-semibold"> communication channel</span> and 
+            <span className="text-white font-semibold"> communication channel</span> and 
             let's bring your ideas to life together
           </p>
           {/* Additional info cards */}
           <div className="flex justify-center gap-8 mt-12">
             <div className="flex items-center gap-3 text-gray-500 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <MapPin size={20} className="text-[var(--cyber-cyan)]" />
+              <MapPin size={20} className="text-white" />
               <span>Pakistan (Remote Available)</span>
             </div>
             <div className="flex items-center gap-3 text-gray-500 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <Clock size={20} className="text-[var(--cyber-cyan)]" />
+              <Clock size={20} className="text-white" />
               <span>Usually responds within 24h</span>
             </div>
           </div>
@@ -155,8 +155,8 @@ const ContactSection = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${method.bgColor} opacity-0 group-hover:opacity-100 transition-all duration-700`} />
               
               {/* Floating particles */}
-              <div className="absolute top-4 right-4 w-2 h-2 bg-[var(--cyber-cyan)]/60 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-6 left-6 w-1 h-1 bg-[var(--cyber-cyan)] rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ animationDelay: '0.3s' }}></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-white/60 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-6 left-6 w-1 h-1 bg-white rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ animationDelay: '0.3s' }}></div>
               {/* Content */}
               <div className="relative text-center transform group-hover:translate-y-1 transition-transform duration-500">
                 {/* Enhanced icon container */}
@@ -165,13 +165,13 @@ const ContactSection = () => {
                 </div>
                 
                 {/* Enhanced text content */}
-                <h3 className="font-bold text-xl text-gray-300 mb-2 group-hover:text-[var(--cyber-cyan)] transition-colors duration-500">{method.label}</h3>
+                <h3 className="font-bold text-xl text-gray-300 mb-2 group-hover:text-white transition-colors duration-500">{method.label}</h3>
                 <p className="text-gray-500 text-sm mb-3 group-hover:text-gray-400 transition-colors duration-500">{method.description}</p>
-                <p className={`${method.color} text-sm font-semibold group-hover:text-[var(--cyber-cyan)] transition-colors duration-500`}>{method.value}</p>
+                <p className={`${method.color} text-sm font-semibold group-hover:text-white transition-colors duration-500`}>{method.value}</p>
                 
                 {/* Hover effect indicator */}
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                  <Send size={16} className="mx-auto text-[var(--cyber-cyan)] animate-bounce" />
+                  <Send size={16} className="mx-auto text-white animate-bounce" />
                 </div>
               </div>
 
@@ -243,15 +243,15 @@ const ContactSection = () => {
         <div className="fixed bottom-8 right-8 z-50">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="group relative w-16 h-16 bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] text-white rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 shadow-2xl shadow-[var(--cyber-purple)]/30 hover:shadow-[var(--cyber-purple)]/50 backdrop-blur-sm border-2 border-white/20 animate-float"
+            className="group relative w-16 h-16 bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] text-white rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 shadow-2xl shadow-cyber-purple/30 hover:shadow-cyber-purple/50 backdrop-blur-sm border-2 border-white/20 animate-float"
           >
             <span className="text-2xl font-bold group-hover:scale-110 transition-transform duration-500">↑</span>
             
             {/* Animated ring */}
-            <div className="absolute inset-0 rounded-2xl border-2 border-[var(--cyber-cyan)] animate-ping opacity-75"></div>
+            <div className="absolute inset-0 rounded-2xl border-2 border-white/30 animate-ping opacity-75"></div>
             
             {/* Hover glow effect */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-[var(--cyber-cyan)]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </button>
         </div>
       </div>

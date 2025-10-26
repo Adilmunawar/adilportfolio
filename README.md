@@ -1,7 +1,6 @@
 # 🚀 Adil Portfolio - Modern Web Developer Portfolio
 
 <div align="center">
-
 ![Portfolio Banner](https://github.com/Adilmunawar/AdilPortfolio/blob/main/public/Screenshot%202025-05-28%20213514.png)
 ![Portfolio Banner](https://github.com/Adilmunawar/AdilPortfolio/blob/main/public/Screenshot%202025-05-28%20213528.png)
 

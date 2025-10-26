@@ -62,17 +62,17 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-gray-300 hover:text-[var(--cyber-cyan)] px-3 py-2 text-sm font-medium transition-all duration-300 relative group",
-                    activeSection === getSectionIdFromHref(item.href) && "text-[var(--cyber-cyan)]"
+                    "text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-all duration-300 relative group",
+                    activeSection === getSectionIdFromHref(item.href) && "text-white"
                   )}
                 >
                   {item.name}
                   <span className={cn(
-                    "absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--cyber-cyan)] transition-all duration-300 group-hover:w-full",
+                    "absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] transition-all duration-300 group-hover:w-full",
                     activeSection === getSectionIdFromHref(item.href) && "w-full"
                   )}></span>
                   
-                  <div className="absolute inset-0 bg-[var(--cyber-cyan)]/10 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--cyber-purple)]/10 to-[var(--cyber-blue)]/10 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                 </Link>
               ))}
             </div>
@@ -81,7 +81,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-[var(--cyber-cyan)] transition-colors duration-300"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,7 +97,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-[var(--cyber-cyan)] block px-3 py-2 text-base font-medium transition-all duration-300 hover:bg-[var(--cyber-cyan)]/10 rounded animate-fade-in-up"
+                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-all duration-300 hover:bg-gradient-to-r from-[var(--cyber-purple)]/10 to-[var(--cyber-blue)]/10 rounded animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
                 onClick={() => setIsOpen(false)}
               >

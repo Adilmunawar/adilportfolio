@@ -12,10 +12,10 @@ const ContactSection = () => {
     description: 'Drop me a line anytime',
     link: 'mailto:adilmunawar@gmail.com',
     color: 'text-red-400',
-    bgColor: 'from-red-500/5 to-pink-500/5',
-    hoverColor: 'hover:from-red-500/15 hover:to-pink-500/15',
-    borderColor: 'border-red-400/20 hover:border-red-400/40',
-    glowColor: 'shadow-red-500/10'
+    bgColor: 'from-red-800/5 to-pink-800/5',
+    hoverColor: 'hover:from-red-800/15 hover:to-pink-800/15',
+    borderColor: 'border-red-700/20 hover:border-red-700/40',
+    glowColor: 'shadow-red-800/10'
   }, {
     Icon: Phone,
     label: 'WhatsApp',
@@ -23,10 +23,10 @@ const ContactSection = () => {
     description: 'Quick chat & instant replies',
     link: 'https://wa.me/923244965220',
     color: 'text-green-400',
-    bgColor: 'from-green-500/5 to-emerald-500/5',
-    hoverColor: 'hover:from-green-500/15 hover:to-emerald-500/15',
-    borderColor: 'border-green-400/20 hover:border-green-400/40',
-    glowColor: 'shadow-green-500/10'
+    bgColor: 'from-green-800/5 to-emerald-800/5',
+    hoverColor: 'hover:from-green-800/15 hover:to-emerald-800/15',
+    borderColor: 'border-green-700/20 hover:border-green-700/40',
+    glowColor: 'shadow-green-800/10'
   }, {
     Icon: Instagram,
     label: 'Instagram',
@@ -34,10 +34,10 @@ const ContactSection = () => {
     description: 'Creative content & stories',
     link: 'https://instagram.com/adilmunawarx',
     color: 'text-pink-400',
-    bgColor: 'from-pink-500/5 to-purple-500/5',
-    hoverColor: 'hover:from-pink-500/15 hover:to-purple-500/15',
-    borderColor: 'border-pink-400/20 hover:border-pink-400/40',
-    glowColor: 'shadow-pink-500/10'
+    bgColor: 'from-pink-800/5 to-purple-800/5',
+    hoverColor: 'hover:from-pink-800/15 hover:to-purple-800/15',
+    borderColor: 'border-pink-700/20 hover:border-pink-700/40',
+    glowColor: 'shadow-pink-800/10'
   }, {
     Icon: MessageSquare,
     label: 'Telegram',
@@ -45,10 +45,10 @@ const ContactSection = () => {
     description: 'Secure messaging platform',
     link: 'https://t.me/adilmunawar',
     color: 'text-blue-400',
-    bgColor: 'from-blue-500/5 to-cyan-500/5',
-    hoverColor: 'hover:from-blue-500/15 hover:to-cyan-500/15',
-    borderColor: 'border-blue-400/20 hover:border-blue-400/40',
-    glowColor: 'shadow-blue-500/10'
+    bgColor: 'from-blue-800/5 to-cyan-800/5',
+    hoverColor: 'hover:from-blue-800/15 hover:to-cyan-800/15',
+    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
+    glowColor: 'shadow-blue-800/10'
   }, {
     Icon: Linkedin,
     label: 'LinkedIn',
@@ -56,10 +56,10 @@ const ContactSection = () => {
     description: 'Connect for opportunities',
     link: 'https://linkedin.com/in/adilmunawar',
     color: 'text-blue-500',
-    bgColor: 'from-blue-600/5 to-indigo-500/5',
-    hoverColor: 'hover:from-blue-600/15 hover:to-indigo-500/15',
-    borderColor: 'border-blue-500/20 hover:border-blue-500/40',
-    glowColor: 'shadow-blue-600/10'
+    bgColor: 'from-blue-800/5 to-indigo-800/5',
+    hoverColor: 'hover:from-blue-800/15 hover:to-indigo-800/15',
+    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
+    glowColor: 'shadow-blue-800/10'
   }, {
     Icon: Github,
     label: 'GitHub',
@@ -67,56 +67,56 @@ const ContactSection = () => {
     description: 'Explore my repositories',
     link: 'https://github.com/adilmunawar',
     color: 'text-gray-400',
-    bgColor: 'from-gray-500/5 to-slate-500/5',
-    hoverColor: 'hover:from-gray-500/15 hover:to-slate-500/15',
-    borderColor: 'border-gray-400/20 hover:border-gray-400/40',
-    glowColor: 'shadow-gray-500/10'
+    bgColor: 'from-gray-700/5 to-slate-700/5',
+    hoverColor: 'hover:from-gray-700/15 hover:to-slate-700/15',
+    borderColor: 'border-gray-600/20 hover:border-gray-600/40',
+    glowColor: 'shadow-gray-700/10'
   }];
 
   const footerSocials = [{
     Icon: Linkedin,
     link: 'https://linkedin.com/in/adilmunawar',
     color: 'hover:text-blue-400',
-    bgGradient: 'from-blue-500/10 to-indigo-500/10',
-    hoverGradient: 'hover:from-blue-500/25 hover:to-indigo-500/25',
-    borderColor: 'border-blue-400/20 hover:border-blue-400/40',
-    shadowColor: 'hover:shadow-blue-500/20',
+    bgGradient: 'from-blue-800/10 to-indigo-800/10',
+    hoverGradient: 'hover:from-blue-800/25 hover:to-indigo-800/25',
+    borderColor: 'border-blue-700/20 hover:border-blue-700/40',
+    shadowColor: 'hover:shadow-blue-800/20',
     dotColor: 'bg-blue-400'
   }, {
     Icon: Github,
     link: 'https://github.com/adilmunawar',
     color: 'hover:text-gray-300',
-    bgGradient: 'from-gray-500/10 to-slate-500/10',
-    hoverGradient: 'hover:from-gray-500/25 hover:to-slate-500/25',
-    borderColor: 'border-gray-400/20 hover:border-gray-400/40',
-    shadowColor: 'hover:shadow-gray-500/20',
+    bgGradient: 'from-gray-700/10 to-slate-700/10',
+    hoverGradient: 'hover:from-gray-700/25 hover:to-slate-700/25',
+    borderColor: 'border-gray-600/20 hover:border-gray-600/40',
+    shadowColor: 'hover:shadow-gray-700/20',
     dotColor: 'bg-gray-300'
   }, {
     Icon: Instagram,
     link: 'https://instagram.com/adilmunawarx',
     color: 'hover:text-pink-400',
-    bgGradient: 'from-pink-500/10 to-purple-500/10',
-    hoverGradient: 'hover:from-pink-500/25 hover:to-purple-500/25',
-    borderColor: 'border-pink-400/20 hover:border-pink-400/40',
-    shadowColor: 'hover:shadow-pink-500/20',
+    bgGradient: 'from-pink-800/10 to-purple-800/10',
+    hoverGradient: 'hover:from-pink-800/25 hover:to-purple-800/25',
+    borderColor: 'border-pink-700/20 hover:border-pink-700/40',
+    shadowColor: 'hover:shadow-pink-800/20',
     dotColor: 'bg-pink-400'
   }, {
     Icon: Phone,
     link: 'https://wa.me/+923244965220',
     color: 'hover:text-green-400',
-    bgGradient: 'from-green-500/10 to-emerald-500/10',
-    hoverGradient: 'hover:from-green-500/25 hover:to-emerald-500/25',
-    borderColor: 'border-green-400/20 hover:border-green-400/40',
-    shadowColor: 'hover:shadow-green-500/20',
+    bgGradient: 'from-green-800/10 to-emerald-800/10',
+    hoverGradient: 'hover:from-green-800/25 hover:to-emerald-800/25',
+    borderColor: 'border-green-700/20 hover:border-green-700/40',
+    shadowColor: 'hover:shadow-green-800/20',
     dotColor: 'bg-green-400'
   }];
   return (
-    <section id="contact" className="min-h-screen py-20 px-4 relative">
+    <section id="contact" className="min-h-screen py-20 px-4 relative bg-transparent">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced header section */}
         <div className="text-center mb-20">
           <div className="inline-block mb-8">
-            <span className="text-[var(--cyber-cyan)] text-sm font-semibold tracking-widest uppercase bg-[var(--cyber-purple)]/5 px-6 py-3 rounded-full border border-[var(--cyber-purple)]/20 backdrop-blur-sm animate-pulse">
+            <span className="text-gray-400 text-sm font-semibold tracking-widest uppercase bg-cyber-purple/5 px-6 py-3 rounded-full border border-cyber-purple/20 backdrop-blur-sm animate-pulse">
               Get In Touch
             </span>
           </div>
@@ -193,7 +193,7 @@ const ContactSection = () => {
           {/* Decorative line */}
           <div className="relative mb-12">
             <div className="h-px bg-gradient-to-r from-transparent via-[var(--cyber-purple)]/30 to-transparent"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[var(--cyber-purple)] rounded-full animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyber-purple rounded-full animate-pulse"></div>
           </div>
           
           <div className="flex flex-col lg:flex-row justify-between items-center gap-8 animate-fade-in-up" style={{ animationDelay: '1s' }}>
@@ -208,7 +208,7 @@ const ContactSection = () => {
                 <p className="text-gray-600 text-sm">© 2025 All Rights Reserved. Built with React & Tailwind CSS</p>
                 
                 {/* Animated underline */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] group-hover:w-full transition-all duration-700"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyber-purple to-cyber-blue group-hover:w-full transition-all duration-700"></div>
               </div>
             </div>
             
@@ -232,7 +232,7 @@ const ContactSection = () => {
                   <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${social.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   {/* Ripple effect */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-[var(--cyber-purple)]/30 scale-0 group-hover:scale-110 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="absolute inset-0 rounded-2xl border-2 border-cyber-purple/30 scale-0 group-hover:scale-110 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 </a>
               ))}
             </div>
@@ -243,7 +243,7 @@ const ContactSection = () => {
         <div className="fixed bottom-8 right-8 z-50">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="group relative w-16 h-16 bg-gradient-to-r from-[var(--cyber-purple)] to-[var(--cyber-blue)] text-white rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 shadow-2xl shadow-cyber-purple/30 hover:shadow-cyber-purple/50 backdrop-blur-sm border-2 border-white/20 animate-float"
+            className="group relative w-16 h-16 bg-gradient-to-r from-cyber-purple to-cyber-blue text-white rounded-2xl flex items-center justify-center transition-all duration-700 hover:scale-125 hover:rotate-12 shadow-2xl shadow-cyber-purple/30 hover:shadow-cyber-purple/50 backdrop-blur-sm border-2 border-white/20 animate-float"
           >
             <span className="text-2xl font-bold group-hover:scale-110 transition-transform duration-500">↑</span>
             

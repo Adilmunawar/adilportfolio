@@ -21,8 +21,8 @@ const HeroSection = () => {
       href: 'https://github.com/adilmunawar',
       label: 'GitHub',
       color: 'text-gray-300',
-      glowColorStart: 'rgba(149, 117, 234, 0.4)',
-      glowColorEnd: 'rgba(149, 117, 234, 0.7)',
+      glowColorStart: 'rgba(59, 29, 138, 0.4)',
+      glowColorEnd: 'rgba(59, 29, 138, 0.7)',
       gradientColor: 'var(--cyber-purple)',
     },
     {
@@ -30,8 +30,8 @@ const HeroSection = () => {
       href: 'https://linkedin.com/in/adilmunawar',
       label: 'LinkedIn',
       color: 'text-blue-400',
-      glowColorStart: 'rgba(99, 102, 241, 0.4)',
-      glowColorEnd: 'rgba(99, 102, 241, 0.7)',
+      glowColorStart: 'rgba(67, 56, 202, 0.4)',
+      glowColorEnd: 'rgba(67, 56, 202, 0.7)',
       gradientColor: 'var(--cyber-blue)',
     },
     {
@@ -209,10 +209,10 @@ const HeroSection = () => {
             <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-[var(--cyber-purple)] via-[var(--cyber-blue)] to-[var(--cyber-purple)] opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-full bg-cyber-dark"></div>
             <div
-              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(59,59,88,0.3)_0%,_rgba(42,42,62,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(59,29,138,0.3)_0%,_rgba(30,30,57,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               style={{ '--glow-x': '50%', '--glow-y': '50%' } as React.CSSProperties}
             ></div>
-            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(59, 59, 88, 0.5)' }}>
+            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(30, 30, 57, 0.5)' }}>
               Explore My Work →
             </span>
           </Button>

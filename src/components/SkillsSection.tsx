@@ -107,16 +107,16 @@ const SkillsSection = () => {
               {/* Category Card with hover tilt effect */}
               <div className="relative group h-[280px] animate-subtle-tilt hover:animate-none">
                 {/* Slower, smoother glow effect */}
-                <div className={`absolute -inset-1 bg-gradient-to-r ${category.color} rounded-2xl blur opacity-10 group-hover:opacity-20 transition-all duration-[2000ms] ease-in-out`}></div>
+                <div className={`absolute -inset-1 bg-gradient-to-r from-cyber-purple to-cyber-blue rounded-2xl blur opacity-10 group-hover:opacity-20 transition-all duration-[2000ms] ease-in-out`}></div>
                 
                 {/* Main card */}
                 <div className="relative bg-cyber-gray/30 backdrop-blur-xl rounded-2xl border border-white/10 p-5 hover:border-white/30 transition-all duration-700 h-full flex flex-col group-hover:transform group-hover:scale-[1.01] group-hover:rotate-1">
                   {/* Category header */}
                   <div className="mb-5">
-                    <h3 className={`text-xl font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent mb-2`}>
+                    <h3 className={`text-xl font-bold bg-gradient-to-r from-cyber-purple to-cyber-blue bg-clip-text text-transparent mb-2`}>
                       {category.title}
                     </h3>
-                    <div className={`h-0.5 w-12 bg-gradient-to-r ${category.color} rounded-full group-hover:w-20 transition-all duration-500`}></div>
+                    <div className={`h-0.5 w-12 bg-gradient-to-r from-cyber-purple to-cyber-blue rounded-full group-hover:w-20 transition-all duration-500`}></div>
                   </div>
 
                   {/* Skills grid */}
@@ -138,7 +138,7 @@ const SkillsSection = () => {
                           />
                           
                           {/* Subtle glow effect on hover */}
-                          <div className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-lg opacity-0 group-hover/skill:opacity-20 blur-lg transition-all duration-700`}></div>
+                          <div className={`absolute inset-0 bg-gradient-to-r from-cyber-purple to-cyber-blue rounded-lg opacity-0 group-hover/skill:opacity-20 blur-lg transition-all duration-700`}></div>
                         </div>
 
                         {/* Skill name */}
@@ -147,7 +147,7 @@ const SkillsSection = () => {
                         </span>
 
                         {/* Subtle hover indicator */}
-                        <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${category.color} opacity-0 group-hover/skill:opacity-5 transition-all duration-700`}></div>
+                        <div className={`absolute inset-0 rounded-lg bg-gradient-to-r from-cyber-purple to-cyber-blue opacity-0 group-hover/skill:opacity-5 transition-all duration-700`}></div>
                       </div>
                     ))}
                   </div>
@@ -160,9 +160,9 @@ const SkillsSection = () => {
 
       {/* Optimized background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/3 rounded-full blur-3xl" style={{ animation: 'drift1 25s ease-in-out infinite' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/3 rounded-full blur-3xl" style={{ animation: 'drift2 30s ease-in-out infinite' }}></div>
-        <div className="absolute top-3/4 left-1/2 w-72 h-72 bg-purple-500/3 rounded-full blur-3xl" style={{ animation: 'drift3 35s ease-in-out infinite' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyber-blue/5 rounded-full blur-3xl" style={{ animation: 'drift1 25s ease-in-out infinite' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyber-purple/5 rounded-full blur-3xl" style={{ animation: 'drift2 30s ease-in-out infinite' }}></div>
+        <div className="absolute top-3/4 left-1/2 w-72 h-72 bg-cyber-purple/5 rounded-full blur-3xl" style={{ animation: 'drift3 35s ease-in-out infinite' }}></div>
       </div>
     </section>
   );

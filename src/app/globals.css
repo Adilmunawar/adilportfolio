@@ -109,14 +109,14 @@
 /* Subtle glow effect */
 .glow-effect {
   box-shadow: 
-    0 0 15px rgba(128, 0, 255, 0.2),
-    0 0 30px rgba(128, 0, 255, 0.1);
+    0 0 15px rgba(59, 29, 138, 0.2),
+    0 0 30px rgba(59, 29, 138, 0.1);
 }
 
 .hover-glow:hover {
   box-shadow: 
-    0 0 20px rgba(128, 0, 255, 0.3),
-    0 0 40px rgba(128, 0, 255, 0.2);
+    0 0 20px rgba(59, 29, 138, 0.3),
+    0 0 40px rgba(59, 29, 138, 0.2);
 }
 
 /* Smooth and professional animations */
@@ -174,8 +174,8 @@
 
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(128, 0, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(128, 0, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(59, 29, 138, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 29, 138, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -195,7 +195,7 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: rgba(128, 0, 255, 0.6);
+  background: rgba(59, 29, 138, 0.6);
   border-radius: 50%;
   animation: particleFloat 12s ease-in-out infinite;
 }
@@ -324,13 +324,13 @@
   backface-visibility: hidden;
 }
 
-/* Updated color definitions - lighter dark theme */
+/* Updated color definitions - darker theme */
 :root {
   --cyber-dark: #1E1E39;
   --cyber-gray: #2a2a3e;
-  --cyber-cyan: #9f7aea; /* A softer purple */
-  --cyber-blue: #6366f1; /* Indigo */
-  --cyber-purple: #8b5cf6; /* Violet */
+  --cyber-cyan: #3730a3; /* Darker Indigo */
+  --cyber-blue: #4338ca; /* Darker Indigo */
+  --cyber-purple: #3b1d8a; /* Darker Violet */
   --cyber-pink: #ff0080;
   --cyber-green: #00ff80;
   --cyber-yellow: #ffff00;
@@ -343,7 +343,7 @@
 
 .hover-lift:hover {
   transform: translateY(-4px) translateZ(0);
-  box-shadow: 0 15px 30px rgba(149, 117, 234, 0.2);
+  box-shadow: 0 15px 30px rgba(59, 29, 138, 0.2);
 }
 
 /* More subtle morphing backgrounds */
@@ -368,7 +368,7 @@
 
 .contact-field-focus:focus {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(149, 117, 234, 0.15);
+  box-shadow: 0 8px 25px rgba(59, 29, 138, 0.15);
 }
 
 /* Smooth pulse animation */
@@ -431,5 +431,3 @@
     transform: rotate(360deg) translateX(35px) rotate(-360deg);
   }
 }
-
-    

@@ -22,9 +22,9 @@ const ProjectsSection = () => {
       statusBg: 'bg-emerald-500/10',
       statusBorder: 'border-emerald-400/20',
       statusIcon: Play,
-      gradient: 'from-emerald-500/5 to-green-500/5',
-      hoverGradient: 'hover:from-emerald-500/15 hover:to-green-500/15',
-      borderColor: 'border-emerald-400/20 hover:border-emerald-400/40',
+      gradient: 'from-emerald-800/5 to-green-800/5',
+      hoverGradient: 'hover:from-emerald-800/15 hover:to-green-800/15',
+      borderColor: 'border-emerald-700/20 hover:border-emerald-700/40',
       accentColor: 'text-emerald-400'
     },
     {
@@ -40,9 +40,9 @@ const ProjectsSection = () => {
       statusBg: 'bg-amber-500/10',
       statusBorder: 'border-amber-400/20',
       statusIcon: Pause,
-      gradient: 'from-amber-500/5 to-orange-500/5',
-      hoverGradient: 'hover:from-amber-500/15 hover:to-orange-500/15',
-      borderColor: 'border-amber-400/20 hover:border-amber-400/40',
+      gradient: 'from-amber-800/5 to-orange-800/5',
+      hoverGradient: 'hover:from-amber-800/15 hover:to-orange-800/15',
+      borderColor: 'border-amber-700/20 hover:border-amber-700/40',
       accentColor: 'text-amber-400'
     },
     {
@@ -58,9 +58,9 @@ const ProjectsSection = () => {
       statusBg: 'bg-blue-500/10',
       statusBorder: 'border-blue-400/20',
       statusIcon: Code2,
-      gradient: 'from-blue-500/5 to-cyan-500/5',
-      hoverGradient: 'hover:from-blue-500/15 hover:to-cyan-500/15',
-      borderColor: 'border-blue-400/20 hover:border-blue-400/40',
+      gradient: 'from-blue-800/5 to-cyan-800/5',
+      hoverGradient: 'hover:from-blue-800/15 hover:to-cyan-800/15',
+      borderColor: 'border-blue-700/20 hover:border-blue-700/40',
       accentColor: 'text-blue-400'
     }
   ];
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
         {/* Enhanced header */}
         <div className="text-center mb-20 animate-fade-in-up">
           <div className="inline-block mb-8">
-            <span className="text-cyber-cyan text-sm font-semibold tracking-widest uppercase bg-cyber-cyan/5 px-6 py-3 rounded-full border border-cyber-cyan/20 backdrop-blur-sm">
+            <span className="text-gray-400 text-sm font-semibold tracking-widest uppercase bg-cyber-purple/5 px-6 py-3 rounded-full border border-cyber-purple/20 backdrop-blur-sm">
               <Sparkles className="inline w-4 h-4 mr-2" />
               Featured Work
             </span>
@@ -90,7 +90,7 @@ const ProjectsSection = () => {
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             Explore my latest creations showcasing modern web technologies, 
-            <span className="text-cyber-cyan font-semibold"> innovative solutions</span>, and 
+            <span className="text-gray-300 font-semibold"> innovative solutions</span>, and 
             cutting-edge design principles
           </p>
         </div>
@@ -132,7 +132,7 @@ const ProjectsSection = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 flex gap-4 z-20">
                   <Button
                     size="sm"
-                    className="bg-cyber-cyan/90 text-black hover:bg-cyber-cyan rounded-full px-4 py-2 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-110"
+                    className="bg-cyber-blue/90 text-white hover:bg-cyber-blue rounded-full px-4 py-2 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-110"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(project.live, '_blank');
@@ -163,14 +163,14 @@ const ProjectsSection = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className={`px-3 py-1 text-xs rounded-full bg-gray-800/40 border border-gray-700/50 ${project.accentColor} backdrop-blur-sm transition-all duration-300 hover:bg-gray-700/60 hover:scale-105`}
+                      className={`px-3 py-1 text-xs rounded-full bg-gray-800/40 border border-gray-700/50 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:bg-gray-700/60 hover:scale-105`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-200 mb-3 group-hover:text-cyber-cyan transition-colors duration-500">
+                <h3 className="text-2xl font-bold text-gray-200 mb-3 group-hover:text-gray-100 transition-colors duration-500">
                   {project.title}
                 </h3>
                 
@@ -182,7 +182,7 @@ const ProjectsSection = () => {
                 <div className="flex gap-3 pt-4 border-t border-gray-700/30">
                   <Button
                     size="sm"
-                    className={`flex-1 bg-gray-800/40 border border-gray-700/50 ${project.accentColor} hover:bg-gray-700/60 hover:text-white transition-all duration-500 hover:scale-105 backdrop-blur-sm rounded-xl`}
+                    className={`flex-1 bg-gray-800/40 border border-gray-700/50 text-gray-300 hover:bg-gray-700/60 hover:text-white transition-all duration-500 hover:scale-105 backdrop-blur-sm rounded-xl`}
                     onClick={() => window.open(project.live, '_blank')}
                   >
                     <ExternalLink size={16} className="mr-2" />
@@ -215,7 +215,7 @@ const ProjectsSection = () => {
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="relative inline-block">
             <Button 
-              className="bg-gradient-to-r from-cyber-cyan to-blue-500 text-black hover:from-blue-500 hover:to-purple-500 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-700 hover:scale-110 shadow-2xl shadow-cyber-cyan/20 hover:shadow-blue-500/30 backdrop-blur-sm border border-white/20 group relative overflow-hidden"
+              className="bg-gradient-to-r from-cyber-purple to-cyber-blue text-white hover:from-cyber-blue hover:to-cyber-purple px-8 py-4 text-lg font-semibold rounded-full transition-all duration-700 hover:scale-110 shadow-2xl shadow-cyber-purple/20 hover:shadow-cyber-blue/30 backdrop-blur-sm border border-white/20 group relative overflow-hidden"
               onClick={() => window.open('https://github.com/adilmunawar', '_blank')}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -225,7 +225,7 @@ const ProjectsSection = () => {
               </span>
               
               {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyber-blue to-cyber-purple transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </Button>
           </div>
         </div>

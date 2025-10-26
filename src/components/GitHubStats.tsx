@@ -159,10 +159,10 @@ const GitHubStats = () => {
   const getLevelColor = (level: number) => {
     switch (level) {
       case 0: return 'bg-gray-800/60';
-      case 1: return 'bg-emerald-900/80';
-      case 2: return 'bg-emerald-700';
-      case 3: return 'bg-emerald-500';
-      case 4: return 'bg-emerald-300';
+      case 1: return 'bg-indigo-900/80';
+      case 2: return 'bg-indigo-800';
+      case 3: return 'bg-indigo-600';
+      case 4: return 'bg-indigo-400';
       default: return 'bg-gray-800/60';
     }
   };
@@ -191,9 +191,9 @@ const GitHubStats = () => {
 
   if (isLoading) {
     return (
-      <Card className="p-8 bg-cyber-gray/20 border-cyber-cyan/30 backdrop-blur-xl relative overflow-hidden">
+      <Card className="p-8 bg-cyber-gray/20 border-cyber-purple/30 backdrop-blur-xl relative overflow-hidden">
         {/* Advanced loading animation */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyber-cyan/10 to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyber-purple/10 to-transparent animate-pulse"></div>
         <div className="animate-pulse relative z-10">
           <div className="h-6 bg-gradient-to-r from-gray-700 to-gray-600 rounded w-1/3 mb-6 animate-shimmer"></div>
           <div className="grid grid-cols-52 gap-1">
@@ -211,17 +211,17 @@ const GitHubStats = () => {
   }
 
   return (
-    <Card className="p-8 bg-cyber-gray/20 border-cyber-cyan/30 backdrop-blur-xl hover:border-cyber-cyan/60 transition-all duration-500 group overflow-hidden relative">
+    <Card className="p-8 bg-cyber-gray/20 border-cyber-purple/30 backdrop-blur-xl hover:border-cyber-purple/60 transition-all duration-500 group overflow-hidden relative">
       {/* Advanced background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/5 via-cyber-blue/5 to-indigo-900/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-purple via-cyber-blue to-indigo-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-cyber-cyan rounded-full animate-float opacity-30"
+            className="absolute w-1 h-1 bg-cyber-blue rounded-full animate-float opacity-30"
             style={{
               left: `${20 + i * 20}%`,
               top: `${30 + i % 3 * 20}%`,
@@ -237,8 +237,8 @@ const GitHubStats = () => {
           <h3 className={`text-2xl font-bold text-white transition-all duration-500 ${animateStats ? 'animate-fade-in-up' : 'opacity-0'}`}>
             GitHub Contributions
           </h3>
-          <div className={`text-cyber-cyan font-mono text-lg font-bold transition-all duration-700 ${animateStats ? 'animate-scale-in' : 'opacity-0'}`}>
-            <span className="inline-block animate-bounce">
+          <div className={`text-gray-300 font-mono text-lg font-bold transition-all duration-700 ${animateStats ? 'animate-scale-in' : 'opacity-0'}`}>
+            <span className="inline-block animate-bounce text-indigo-400">
               {totalContributions.toLocaleString()}
             </span>
             <span className="ml-2 text-sm text-gray-400">contributions</span>
@@ -258,7 +258,7 @@ const GitHubStats = () => {
                 {week.map((day, dayIndex) => (
                   <div
                     key={day.date}
-                    className={`w-3 h-3 rounded-sm ${getLevelColor(day.level)} hover:ring-2 hover:ring-cyber-cyan/50 transition-all duration-300 cursor-pointer group/day hover:scale-125 animate-scale-in`}
+                    className={`w-3 h-3 rounded-sm ${getLevelColor(day.level)} hover:ring-2 hover:ring-cyber-blue/50 transition-all duration-300 cursor-pointer group/day hover:scale-125 animate-scale-in`}
                     title={`${day.count} contributions on ${new Date(day.date).toLocaleDateString()}`}
                     style={{ 
                       animationDelay: `${(weekIndex * 7 + dayIndex) * 10}ms`,
@@ -274,7 +274,7 @@ const GitHubStats = () => {
         </div>
         
         <div className={`flex justify-between items-center mt-6 text-xs text-gray-400 transition-all duration-700 ${animateStats ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '400ms' }}>
-          <span className="hover:text-cyber-cyan transition-colors">Less</span>
+          <span className="hover:text-gray-300 transition-colors">Less</span>
           <div className="flex gap-1">
             {[0, 1, 2, 3, 4].map(level => (
               <div 
@@ -284,7 +284,7 @@ const GitHubStats = () => {
               ></div>
             ))}
           </div>
-          <span className="hover:text-cyber-cyan transition-colors">More</span>
+          <span className="hover:text-gray-300 transition-colors">More</span>
         </div>
       </div>
     </Card>

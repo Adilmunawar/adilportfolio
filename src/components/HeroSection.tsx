@@ -9,10 +9,10 @@ const HeroSection = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [typingSpeed, setTypingSpeed] = useState(100);
 
-  const toRotate = [ "Full-Stack Developer", "Web Developer", "Vibe Coder" ];
-  const period = 2000;
+  const toRotate = [ "Vibe Coder", "Frontend Engineer", "UI/UX Enthusiast" ];
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -39,9 +39,9 @@ const HeroSection = () => {
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setTypingSpeed(150);
+      setTypingSpeed(50);
     } else if (!isDeleting) {
-        setTypingSpeed(150);
+        setTypingSpeed(100);
     }
   }
 
@@ -262,7 +262,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-    
 
     

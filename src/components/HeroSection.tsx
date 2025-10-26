@@ -21,18 +21,18 @@ const HeroSection = () => {
       href: 'https://github.com/adilmunawar',
       label: 'GitHub',
       color: 'text-gray-300',
-      glowColorStart: 'rgba(0, 255, 255, 0.4)',
-      glowColorEnd: 'rgba(0, 255, 255, 0.7)',
-      gradientColor: '#00ffff',
+      glowColorStart: 'rgba(149, 117, 234, 0.4)',
+      glowColorEnd: 'rgba(149, 117, 234, 0.7)',
+      gradientColor: '#9575ea',
     },
     {
       Icon: Linkedin,
       href: 'https://linkedin.com/in/adilmunawar',
       label: 'LinkedIn',
       color: 'text-blue-400',
-      glowColorStart: 'rgba(0, 255, 255, 0.4)',
-      glowColorEnd: 'rgba(0, 255, 255, 0.7)',
-      gradientColor: '#00ffff',
+      glowColorStart: 'rgba(99, 102, 241, 0.4)',
+      glowColorEnd: 'rgba(99, 102, 241, 0.7)',
+      gradientColor: '#6366f1',
     },
     {
       Icon: Phone,
@@ -145,13 +145,13 @@ const HeroSection = () => {
               <div
                 key={skill}
                 ref={(el) => { skillRefs.current[index] = el; }}
-                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-cyber-cyan/20 backdrop-blur-sm hover:bg-gray-700/60"
+                className="group relative px-4 py-2 rounded-full transition-all duration-300 bg-gray-800/40 border border-[var(--cyber-purple)]/20 backdrop-blur-sm hover:bg-gray-700/60"
                 style={{ transition: 'transform 0.1s ease-out' }}
               >
-                <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-cyber-cyan">
+                <span className="relative text-gray-300 text-sm font-medium transition-colors duration-300 group-hover:text-[var(--cyber-cyan)]">
                   {skill}
                 </span>
-                <div className="absolute -inset-px rounded-full bg-cyber-cyan/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
+                <div className="absolute -inset-px rounded-full bg-[var(--cyber-purple)]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
               </div>
             ))}
           </div>
@@ -203,20 +203,16 @@ const HeroSection = () => {
             style={{
               transition: 'transform 0.1s ease-out',
               transformStyle: 'preserve-3d',
-              '--aurora-speed': '30s',
-              '--aurora-size': '400%',
-              '--aurora-x': '50%',
-              '--aurora-y': '50%',
             } as React.CSSProperties}
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-cyber-cyan via-cyber-blue to-cyber-purple opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-[var(--cyber-purple)] via-[var(--cyber-blue)] to-[var(--cyber-cyan)] opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-full bg-cyber-dark"></div>
             <div
-              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(0,255,255,0.3)_0%,_rgba(0,128,255,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_rgba(149,117,234,0.3)_0%,_rgba(99,102,241,0)_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               style={{ '--glow-x': '50%', '--glow-y': '50%' } as React.CSSProperties}
             ></div>
-            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(0, 255, 255, 0.5)' }}>
+            <span className="relative z-10 flex items-center gap-2 group-hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 15px rgba(149, 117, 234, 0.5)' }}>
               Explore My Work →
             </span>
           </Button>
@@ -227,5 +223,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-    

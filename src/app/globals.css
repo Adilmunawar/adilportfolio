@@ -88,7 +88,7 @@
 
 /* Professional gradient text - slower and more subtle */
 .text-gradient {
-  background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue), var(--cyber-purple));
+  background: linear-gradient(90deg, var(--cyber-purple), var(--cyber-blue), var(--cyber-cyan));
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -98,7 +98,7 @@
 
 /* Slower professional gradient text */
 .text-gradient-slow {
-  background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue), var(--cyber-purple));
+  background: linear-gradient(90deg, var(--cyber-purple), var(--cyber-blue), var(--cyber-cyan));
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -109,14 +109,14 @@
 /* Subtle glow effect */
 .glow-effect {
   box-shadow: 
-    0 0 15px rgba(0, 255, 255, 0.2),
-    0 0 30px rgba(0, 255, 255, 0.1);
+    0 0 15px rgba(128, 0, 255, 0.2),
+    0 0 30px rgba(128, 0, 255, 0.1);
 }
 
 .hover-glow:hover {
   box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.3),
-    0 0 40px rgba(0, 255, 255, 0.2);
+    0 0 20px rgba(128, 0, 255, 0.3),
+    0 0 40px rgba(128, 0, 255, 0.2);
 }
 
 /* Smooth and professional animations */
@@ -163,7 +163,7 @@
 
 /* Professional gradient animation - much slower */
 .bg-gradient-moving {
-  background: linear-gradient(-45deg, #00ffff, #0080ff, #8000ff, #ff0080);
+  background: linear-gradient(-45deg, var(--cyber-purple), var(--cyber-blue), #2a2a3e, #1a1a2e);
   background-size: 400% 400%;
   animation: professionalGradientMove 35s ease infinite;
 }
@@ -174,8 +174,8 @@
 
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(128, 0, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 0, 255, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -195,7 +195,7 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: rgba(0, 255, 255, 0.6);
+  background: rgba(128, 0, 255, 0.6);
   border-radius: 50%;
   animation: particleFloat 12s ease-in-out infinite;
 }
@@ -328,9 +328,9 @@
 :root {
   --cyber-dark: #1E1E39;
   --cyber-gray: #2a2a3e;
-  --cyber-cyan: #00ffff;
-  --cyber-blue: #0080ff;
-  --cyber-purple: #8000ff;
+  --cyber-cyan: #9f7aea; /* A softer purple */
+  --cyber-blue: #6366f1; /* Indigo */
+  --cyber-purple: #8b5cf6; /* Violet */
   --cyber-pink: #ff0080;
   --cyber-green: #00ff80;
   --cyber-yellow: #ffff00;
@@ -343,12 +343,12 @@
 
 .hover-lift:hover {
   transform: translateY(-4px) translateZ(0);
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(149, 117, 234, 0.2);
 }
 
 /* More subtle morphing backgrounds */
 .morph-bg {
-  background: linear-gradient(45deg, #00ffff, #0080ff, #8000ff, #ff0080);
+  background: linear-gradient(45deg, var(--cyber-purple), var(--cyber-blue), var(--cyber-cyan), var(--cyber-pink));
   background-size: 300% 300%;
   animation: morphBackground 30s ease infinite;
 }
@@ -368,7 +368,7 @@
 
 .contact-field-focus:focus {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(149, 117, 234, 0.15);
 }
 
 /* Smooth pulse animation */

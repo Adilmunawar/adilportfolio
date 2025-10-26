@@ -62,8 +62,9 @@ const config = {
         },
         'cyber-dark': '#1a1a2e',
         'cyber-gray': '#2a2a3e',
-        'cyber-cyan': '#00ffff',
-        'cyber-blue': '#0080ff',
+        'cyber-cyan': '#3730a3',
+        'cyber-blue': '#4338ca',
+        'cyber-purple': '#3b1d8a',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,3 +96,5 @@ const config = {
 } satisfies Config;
 
 export default config;
+
+    

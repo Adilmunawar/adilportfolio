@@ -11,7 +11,7 @@ const ContactSection = () => {
     value: 'adilmunawar@gmail.com',
     description: 'Drop me a line anytime',
     link: 'mailto:adilmunawar@gmail.com',
-    color: 'text-primary',
+    color: 'text-cyber-purple',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -22,7 +22,7 @@ const ContactSection = () => {
     value: '+92 324 4965220',
     description: 'Quick chat & instant replies',
     link: 'https://wa.me/923244965220',
-    color: 'text-primary',
+    color: 'text-cyber-blue',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -33,7 +33,7 @@ const ContactSection = () => {
     value: '@adilmunawarx',
     description: 'Creative content & stories',
     link: 'https://instagram.com/adilmunawarx',
-    color: 'text-primary',
+    color: 'text-cyber-purple',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -44,7 +44,7 @@ const ContactSection = () => {
     value: '@adilmunawarx',
     description: 'Secure messaging platform',
     link: 'https://t.me/adilmunawar',
-    color: 'text-primary',
+    color: 'text-cyber-blue',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -55,7 +55,7 @@ const ContactSection = () => {
     value: 'Professional Network',
     description: 'Connect for opportunities',
     link: 'https://linkedin.com/in/adilmunawar',
-    color: 'text-primary',
+    color: 'text-cyber-purple',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -66,7 +66,7 @@ const ContactSection = () => {
     value: 'Open Source Projects',
     description: 'Explore my repositories',
     link: 'https://github.com/adilmunawar',
-    color: 'text-primary',
+    color: 'text-cyber-blue',
     bgColor: 'from-cyber-purple/5 to-cyber-blue/5',
     hoverColor: 'hover:from-cyber-purple/15 hover:to-cyber-blue/15',
     borderColor: 'border-cyber-purple/20 hover:border-cyber-purple/40',
@@ -161,7 +161,7 @@ const ContactSection = () => {
               <div className="relative text-center transform group-hover:translate-y-1 transition-transform duration-500">
                 {/* Enhanced icon container */}
                 <div className={`w-20 h-20 rounded-2xl border-2 ${method.borderColor} bg-gray-800/40 backdrop-blur-sm flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 shadow-xl ${method.glowColor} ${hoveredCard === index ? 'animate-bounce' : ''}`}>
-                  <method.Icon size={36} className={`${method.color} group-hover:drop-shadow-lg transition-all duration-500`} />
+                  <method.Icon size={36} className={`group-hover:drop-shadow-lg transition-all duration-500 ${method.color}`} />
                 </div>
                 
                 {/* Enhanced text content */}
@@ -260,3 +260,5 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
+    

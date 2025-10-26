@@ -16,7 +16,8 @@ export default function Home() {
         position: 'fixed', 
         top: 0, 
         left: 0, 
-        zIndex: 0 
+        zIndex: 0,
+        transform: 'scale(1.1) translateX(2%)',
       }}>
         <Spline
           scene="https://prod.spline.design/AvF-dvRCaMAo12qX/scene.splinecode" 

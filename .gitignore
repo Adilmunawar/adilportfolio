@@ -1,4 +1,3 @@
-# Logs
 logs
 *.log
 npm-debug.log*
@@ -23,3 +22,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Build output & Caches
+/.next/
+/.idx/

@@ -8,7 +8,7 @@ const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const dynamicTexts = [
     "Passionate Developer",
-    "Full-Stack Engineer",
+    "Web Developer",
     "Problem Solver",
     "Innovation Driver"
   ];
@@ -43,7 +43,7 @@ const AboutSection = () => {
       <div id="about-section-observer" className="max-w-6xl mx-auto relative z-10">
         {/* Clean, professional title section */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-shimmer">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient-slow">
             About Me
           </h2>
           
@@ -60,7 +60,7 @@ const AboutSection = () => {
           <div className={`flex justify-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
             <ProfileCard
               name="Adil Munawar"
-              title="Prompt Engineer"
+              title="Web Developer"
               handle="Adil Munawar"
               status="Online"
               contactText="Contact Me"
@@ -104,7 +104,7 @@ const AboutSection = () => {
               
               <Card className="relative group overflow-hidden bg-cyber-gray/10 border-cyber-blue/20 backdrop-blur-xl hover:border-cyber-blue/40 transition-all duration-500 p-4">
                   <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider mb-1">Specialization</p>
-                  <p className="text-white font-mono text-sm">Full-Stack Development</p>
+                  <p className="text-white font-mono text-sm">Web Development</p>
               </Card>
             </div>
           </div>

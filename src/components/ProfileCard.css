@@ -70,8 +70,8 @@
       hsla(280, 80%, 70%, calc(var(--card-opacity) * 0.75)) 10%, 
       hsla(240, 60%, 60%, calc(var(--card-opacity) * 0.5)) 50%, 
       hsla(240, 0%, 30%, 0) 100%),
-    radial-gradient(35% 52% at 55% 20%, #8b5cf6 0%, #1e1b4b00 100%),
-    conic-gradient(from 124deg at 50% 50%, #6366f1 0%, #8b5cf6 40%, #a855f7 60%, #6366f1 100%);
+    radial-gradient(35% 52% at 55% 20%, var(--cyber-purple) 0%, #1e1b4b00 100%),
+    conic-gradient(from 124deg at 50% 50%, var(--cyber-blue) 0%, var(--cyber-purple) 40%, #a855f7 60%, var(--cyber-blue) 100%);
   overflow: hidden;
 }
 
@@ -335,7 +335,7 @@
   margin: 0;
   font-size: min(5svh, 2.5em);
   margin: 0;
-  background-image: linear-gradient(to bottom, #fff, #a855f7);
+  background-image: linear-gradient(to bottom, #fff, var(--cyber-purple));
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -350,7 +350,7 @@
   font-size: 16px;
   margin: 0 auto;
   width: min-content;
-  background-image: linear-gradient(to bottom, #fff, #8b5cf6);
+  background-image: linear-gradient(to bottom, #fff, var(--cyber-blue));
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;

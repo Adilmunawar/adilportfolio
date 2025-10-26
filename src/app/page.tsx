@@ -10,7 +10,14 @@ import ContactSection from '@/components/ContactSection';
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-cyber-dark">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
+      <div style={{ 
+        width: '100vw', 
+        height: '100vh', 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        zIndex: -1 
+      }}>
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
           mouseForce={20}

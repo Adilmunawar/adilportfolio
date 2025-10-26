@@ -6,14 +6,53 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import React, { useRef, useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const toRotate = [ "Full-Stack Developer", "Web Developer", "Vibe Coder" ];
+  const period = 2000;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, typingSpeed);
+
+    return () => { clearInterval(ticker) };
+  }, [text, typingSpeed])
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setTypingSpeed(prevSpeed => prevSpeed / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setTypingSpeed(period);
+    } else if (isDeleting && updatedText === '') {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setTypingSpeed(150);
+    } else if (!isDeleting) {
+        setTypingSpeed(150);
+    }
+  }
+
   const socialLinks = [
     {
       Icon: Instagram,
       href: 'https://instagram.com/adilmunawarx',
       label: 'Instagram',
       color: 'text-gray-400',
-      glowColorStart: 'rgba(236, 72, 153, 0.4)',
-      glowColorEnd: 'rgba(219, 39, 119, 0.7)',
+      glowColorStart: 'rgba(59, 29, 138, 0.4)',
+      glowColorEnd: 'rgba(59, 29, 138, 0.7)',
       gradientColor: 'var(--cyber-purple)',
     },
     {
@@ -131,11 +170,11 @@ const HeroSection = () => {
           </h1>
           
           {/* Professional subtitle */}
-          <div className="relative mb-8">
+          <div className="relative mb-8 h-10">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-200 drop-shadow-md animate-fade-in-up" style={{
               animationDelay: '0.3s'
             }}>
-              Full-Stack Developer
+              <span className="typing-cursor">{text}</span>
             </h3>
           </div>
 

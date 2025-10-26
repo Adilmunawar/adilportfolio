@@ -431,3 +431,13 @@
     transform: rotate(360deg) translateX(35px) rotate(-360deg);
   }
 }
+
+.typing-cursor {
+  border-right: 2px solid hsl(var(--foreground));
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(var(--foreground)); }
+}
